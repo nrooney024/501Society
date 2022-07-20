@@ -25,9 +25,28 @@ app.use(express.urlencoded({extended:true}))
 app.use(express.json())
 app.use(cors())
 
+// GET Homepage
 app.get('/', async (request, response) => {
     try {
         response.render('index.ejs')
+    } catch (error) {
+        response.status(500).send({message: error.message})
+    }
+})
+
+// GET Learning Stack Page
+app.get('/learning-stack-page', async (request, response) => {
+    try {
+        response.render('learning-stack-page.ejs')
+    } catch (error) {
+        response.status(500).send({message: error.message})
+    }
+})
+
+// GET Learning Stacks
+app.get('/learning-stacks', async (request, response) => {
+    try {
+        response.render('learning-stacks.ejs')
     } catch (error) {
         response.status(500).send({message: error.message})
     }
