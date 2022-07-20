@@ -35,7 +35,7 @@ app.get('/', async (request, response) => {
 })
 
 // GET Learning Stack Page
-app.get('/learning-stack-page', async (request, response) => {
+app.get('/learning-stack-page.ejs', async (request, response) => {
     try {
         response.render('learning-stack-page.ejs')
     } catch (error) {
@@ -44,7 +44,7 @@ app.get('/learning-stack-page', async (request, response) => {
 })
 
 // GET Learning Stacks
-app.get('/learning-stacks', async (request, response) => {
+app.get('/learning-stacks.ejs', async (request, response) => {
     try {
         response.render('learning-stacks.ejs')
     } catch (error) {
