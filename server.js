@@ -35,6 +35,8 @@ app.get('/', async (request, response) => {
 })
 
 // GET Learning Stack Page
+
+/*
 app.get('/learning-stack-page.ejs', async (request, response) => {
     try {
         response.render('learning-stack-page.ejs')
@@ -51,6 +53,6 @@ app.get('/learning-stacks.ejs', async (request, response) => {
         response.status(500).send({message: error.message})
     }
 })
-
+*/
 app.listen(process.env.PORT || PORT, function() {
     console.log(`Listening...`)})
