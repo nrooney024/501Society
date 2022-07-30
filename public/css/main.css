@@ -2902,6 +2902,12 @@ input, select, textarea {
 				margin: 0 auto;
 			}
 
+			.add-learning-stack-button{
+				display: flex;
+				align-items: flex-start;
+				justify-items: right;
+			}
+
 		/* Actions */
 
 			ul.actions {
