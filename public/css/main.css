@@ -2682,7 +2682,7 @@ input, select, textarea {
 				-webkit-transition: -webkit-transform 0.5s ease;
 				-ms-transition: -ms-transform 0.5s ease;
 				transition: transform 0.5s ease;
-				display: block;
+				display: flex;
 				height: 44px;
 				left: 0;
 				position: fixed;
@@ -2690,6 +2690,8 @@ input, select, textarea {
 				width: 50%;
 				z-index: 10001;
 				background: none;
+				align-self: flex-start;
+				justify-self: flex-start;
 			}
 
 				#titleBar .title {
