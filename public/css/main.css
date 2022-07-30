@@ -2909,6 +2909,7 @@ input, select, textarea {
 				display: flex;
 				align-self: flex-start;
 				justify-self: right;
+				width: 10%;
 			}
 
 		/* Actions */
