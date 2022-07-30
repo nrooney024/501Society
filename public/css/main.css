@@ -1657,6 +1657,17 @@ input, select, textarea {
 		line-height: 4em;
 	}
 
+	.add-learning-stack-button{
+		display: flex;
+		align-self: flex-start;
+		justify-self: right;
+		width: 54px;
+		height: 38px;
+		flex-wrap: wrap;
+		color: rgba(255, 255, 255, 0.75);
+		background-color: rgba(92, 95, 103, 0.5);
+	}
+
 		input[type="button"]:hover,
 		input[type="submit"]:hover,
 		input[type="reset"]:hover,
@@ -2905,16 +2916,7 @@ input, select, textarea {
 				margin: 0 auto;
 			}
 
-			.add-learning-stack-button{
-				display: flex;
-				align-self: flex-start;
-				justify-self: right;
-				width: 54px;
-				height: 38px;
-				flex-wrap: wrap;
-				color: rgba(255, 255, 255, 0.75);
-    			background-color: rgba(92, 95, 103, 0.5);
-			}
+
 
 		/* Actions */
 
