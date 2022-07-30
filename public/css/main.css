@@ -2909,8 +2909,11 @@ input, select, textarea {
 				display: flex;
 				align-self: flex-start;
 				justify-self: right;
-				width: 2.5%;
+				width: 54px;
+				height: 38px;
 				flex-wrap: wrap;
+				color: rgba(255, 255, 255, 0.75);
+    			background-color: rgba(92, 95, 103, 0.5);
 			}
 
 		/* Actions */
