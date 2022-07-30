@@ -2904,8 +2904,8 @@ input, select, textarea {
 
 			.add-learning-stack-button{
 				display: flex;
-				align-items: flex-start;
-				justify-items: right;
+				align-self: flex-start;
+				justify-self: right;
 			}
 
 		/* Actions */
