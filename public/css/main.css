@@ -1661,9 +1661,9 @@ input, select, textarea {
 		display: block;
 		align-self: flex-start;
 		justify-self: right;
-		width: 54px;
+		width: auto;
 		height: 38px;
-		flex-wrap: wrap;
+		flex-wrap: nowrap;
 		color: rgba(255, 255, 255, 0.75);
 		background-color: rgba(92, 95, 103, 0.5);
 		border-radius: 0.25em;
@@ -1673,6 +1673,8 @@ input, select, textarea {
 		margin: 6px 6px 0 0;
 		min-width: .1em;
 		padding: .25em;
+		letter-spacing: 0;
+		line-height: 50%;
 	}
 
 		input[type="button"]:hover,
