@@ -1785,7 +1785,6 @@ input, select, textarea {
   	background-color: white;
 	margin-left: 10%;
 	width: 80%;
-	height: 30%;
 	margin-bottom: 40%;
 }
 
@@ -1799,6 +1798,19 @@ input, select, textarea {
 
 .close-form{
 	justify-self: right;
+	margin-bottom: 5em;
+    margin-left: 75%;
+	background-color: none;
+	color: #484d55;
+	text-decoration: underline;
+}
+
+.close-form:hover{
+	text-decoration: none;
+}
+
+.submit-form{
+	margin-top: 3em;
 }
 
 /* List */
