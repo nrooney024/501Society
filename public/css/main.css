@@ -1657,28 +1657,6 @@ input, select, textarea {
 		line-height: 4em;
 	}
 
-	.add-learning-stack-button{
-		display: block;
-		align-self: flex-start;
-		justify-self: right;
-		width: auto;
-		height: 38px;
-		flex-wrap: nowrap;
-		color: rgba(255, 255, 255, 0.75);
-		background-color: rgba(92, 95, 103, 0.5);
-		border-radius: 0.25em;
-		line-height: 38px;
-		text-align: center;
-		font-size: 14px;
-		margin: 6px 6px 0 0;
-		min-width: .1em;
-		padding: .25em;
-		letter-spacing: 0;
-		line-height: 50%;
-		/* Need to make this fixed */
-		/* position: fixed; */
-	}
-
 		input[type="button"]:hover,
 		input[type="submit"]:hover,
 		input[type="reset"]:hover,
@@ -2180,7 +2158,6 @@ input, select, textarea {
 		top: 2.5em;
 		left: 0;
 		width: 100%;
-		max-width: 100%;
 		text-align: center;
 	}
 
@@ -2705,16 +2682,14 @@ input, select, textarea {
 				-webkit-transition: -webkit-transform 0.5s ease;
 				-ms-transition: -ms-transform 0.5s ease;
 				transition: transform 0.5s ease;
-				display: flex;
+				display: block;
 				height: 44px;
 				left: 0;
 				position: fixed;
 				top: 0;
-				width: 50%;
+				width: 100%;
 				z-index: 10001;
 				background: none;
-				align-self: flex-start;
-				justify-self: flex-start;
 			}
 
 				#titleBar .title {
@@ -2926,8 +2901,6 @@ input, select, textarea {
 				max-width: 30em;
 				margin: 0 auto;
 			}
-
-
 
 		/* Actions */
 
