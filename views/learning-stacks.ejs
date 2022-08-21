@@ -33,9 +33,9 @@
 								<li><a href="learning-stacks.ejs">Learning Stacks</a></li>
 							</ul>
 						</nav>
+					
+						<button type="button" class="add-learning-stack-button">Add Learning Stack +</button>
 
-					
-					
 				</section>
 
 			<!-- Nav Bar -->
@@ -67,6 +67,12 @@
 										</div>
 									</a>
 
+									<% todos.forEach( el => { %>
+										<li class='todoItem' data-id='<%=el._id%>'>
+											<span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
+											<span class='del'> Delete </span>
+										</li>
+									<% }) %>  
 							</div>
 					</div>
 				</div>
