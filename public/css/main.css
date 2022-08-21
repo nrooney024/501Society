@@ -1750,6 +1750,30 @@ input, select, textarea {
 				background-color: #1f232b;
 			}
 
+
+			.add-learning-stack-button{
+				display: block;
+				align-self: flex-start;
+				justify-self: right;
+				width: auto;
+				height: 38px;
+				flex-wrap: nowrap;
+				color: rgba(255, 255, 255, 0.75);
+				background-color: rgba(92, 95, 103, 0.5);
+				border-radius: 0.25em;
+				line-height: 38px;
+				text-align: center;
+				font-size: 14px;
+				margin: 6px 6px 0 0;
+				min-width: .1em;
+				padding: .25em;
+				letter-spacing: 0;
+				line-height: 50%;
+				/* Need to make this fixed */
+				/* position: fixed; */
+			}
+
+
 /* List */
 
 	ul {
