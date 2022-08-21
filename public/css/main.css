@@ -1778,14 +1778,17 @@ input, select, textarea {
 .add-learning-stack-form{
 	/* display: none; */
 	position: fixed;
-	bottom: 0;
+	/* bottom: 0; */
 	border: 3px solid #f1f1f1;
-	z-index: 10;
+	/* z-index: 10; */
   	padding: 4em;
   	background-color: white;
-	margin-left: 10%;
+	/* margin-left: 10%; */
 	width: 80%;
-	margin-bottom: 40%;
+	/* margin-bottom: 40%; */
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 .add-learning-stack-header{
