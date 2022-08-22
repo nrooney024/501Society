@@ -66,7 +66,7 @@
 })(jQuery);
 
 
-// document.querySelector('.add-learning-stack-button').addEventListener('Click',toggleAddLearningStackDisplay)
+document.querySelector('.add-learning-stack-button').addEventListener('click',toggleAddLearningStackDisplay)
 
 function toggleAddLearningStackDisplay(){
 	var x = document.getElementsByClassName("add-learning-stack-form");
