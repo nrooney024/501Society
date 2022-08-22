@@ -66,10 +66,10 @@
 })(jQuery);
 
 
-document.querySelector('.add-learning-stack-button').addEventListener('click',toggleAddLearningStackDisplay)
+// document.querySelector('.add-learning-stack-button').addEventListener('click',toggleAddLearningStackDisplay)
 
 function toggleAddLearningStackDisplay(){
-	var x = document.getElementsByClassName("add-learning-stack-form");
+	var x = document.getElementById('toggleAddLearningStackDisplay');
   	if (x.style.display === "none") {
     	x.style.display = "block";
   	}else {
