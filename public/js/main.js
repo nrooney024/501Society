@@ -64,3 +64,15 @@
 				});
 
 })(jQuery);
+
+
+// document.querySelector('.add-learning-stack-button').addEventListener('Click',toggleAddLearningStackDisplay)
+
+function toggleAddLearningStackDisplay(){
+	var x = document.getElementsByClassName("add-learning-stack-button");
+  	if (x.style.display === "none") {
+    	x.style.display = "block";
+  	}else {
+    	x.style.display = "none";
+  }
+}
