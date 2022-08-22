@@ -1806,8 +1806,9 @@ input, select, textarea {
 	margin-bottom: 5em;
     margin-left: 75%;
 	background-color: none;
-	/* color: #484d55; */
+	color: #919499;
 	text-decoration: underline;
+	
 }
 
 .close-form:hover{
