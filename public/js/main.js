@@ -69,7 +69,7 @@
 // document.querySelector('.add-learning-stack-button').addEventListener('Click',toggleAddLearningStackDisplay)
 
 function toggleAddLearningStackDisplay(){
-	var x = document.getElementsByClassName("add-learning-stack-button");
+	var x = document.getElementsByClassName("add-learning-stack-form");
   	if (x.style.display === "none") {
     	x.style.display = "block";
   	}else {
