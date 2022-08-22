@@ -1794,6 +1794,7 @@ input, select, textarea {
 
 .add-learning-stack-header{
 	font-size: 2.5em;
+	margin-bottom: 2em;
 }
 
 .form-name{
@@ -1805,7 +1806,7 @@ input, select, textarea {
 	margin-bottom: 5em;
     margin-left: 75%;
 	background-color: none;
-	color: #484d55;
+	/* color: #484d55; */
 	text-decoration: underline;
 }
 
