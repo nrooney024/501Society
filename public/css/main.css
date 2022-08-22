@@ -1769,6 +1769,7 @@ input, select, textarea {
 				padding: .25em;
 				letter-spacing: 0;
 				line-height: 100%;
+				z-index: 9000;
 				/* Need to make this fixed */
 				/* position: fixed; */
 			}
