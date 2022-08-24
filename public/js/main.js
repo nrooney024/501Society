@@ -69,7 +69,7 @@
 document.querySelector('.clickToToggleAddLearningStackDisplay').addEventListener('click',toggleAddLearningStackDisplay)
 
 function toggleAddLearningStackDisplay(){
-	var x = document.getElementById('toggleAddLearningStackDisplay');
+	let x = document.getElementsByClassName('clickToToggleAddLearningStackDisplay');
   	if (x.style.display === "none") {
     	x.style.display = "block";
   	}else {
