@@ -2758,7 +2758,7 @@ input, select, textarea {
 				position: fixed;
 				top: 0;
 				width: 100%;
-				z-index: 10001;
+				z-index: 9996;
 				background: none;
 			}
 
