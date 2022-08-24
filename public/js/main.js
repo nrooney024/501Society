@@ -78,9 +78,9 @@
 // }
 
 function openForm() {
-	document.getElementById("clickToToggleAddLearningStackDisplay").style.display = "block";
+	document.getElementById("addLearningStackForm").style.display = "block";
   }
   
   function closeForm() {
-	document.getElementById("clickToToggleAddLearningStackDisplay").style.display = "none";
+	document.getElementById("addLearningStackForm").style.display = "none";
   }
