@@ -66,13 +66,21 @@
 })(jQuery);
 
 
-document.querySelector('.clickToToggleAddLearningStackDisplay').addEventListener('click',toggleAddLearningStackDisplay)
+// document.querySelector('.clickToToggleAddLearningStackDisplay').addEventListener('click',toggleAddLearningStackDisplay)
 
-function toggleAddLearningStackDisplay(){
-	let x = document.getElementsByClassName('clickToToggleAddLearningStackDisplay');
-  	if (x.style.display === "none") {
-    	x.style.display = "block";
-  	}else {
-    	x.style.display = "none";
+// function toggleAddLearningStackDisplay(){
+// 	let x = document.getElementsByClassName('clickToToggleAddLearningStackDisplay');
+//   	if (x.style.display === "none") {
+//     	x.style.display = "block";
+//   	}else {
+//     	x.style.display = "none";
+//   }
+// }
+
+function openForm() {
+	document.getElementById("clickToToggleAddLearningStackDisplay").style.display = "block";
   }
-}
+  
+  function closeForm() {
+	document.getElementById("clickToToggleAddLearningStackDisplay").style.display = "none";
+  }
