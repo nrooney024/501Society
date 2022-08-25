@@ -1,13 +1,18 @@
 const mongoose = require('mongoose')
 
 const LearningStackSchema = new mongoose.Schema({
-  todo: {
+  learningStack: {
     type: String,
     required: true,
   },
-  completed: {
-    type: Boolean,
-    required: true,
+  dateCreated: {
+    type: Date,
+  },
+  dateLastOpened: {
+    type: Date,
+  },
+  learningStackList: {
+    type: Array
   }
 })
 
