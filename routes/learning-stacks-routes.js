@@ -4,7 +4,7 @@ const learningStacksControllers = require('../controllers/learning-stacks-contro
 
 router.get('/', learningStacksControllers.getLearningStacks)
 
-// router.post('/createTodo', todosController.createTodo)
+router.post('/createLearningStack', learningStacksControllers.createLearningStack)
 
 // router.put('/markComplete', todosController.markComplete)
 

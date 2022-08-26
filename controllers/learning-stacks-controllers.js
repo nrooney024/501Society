@@ -1,34 +1,34 @@
-const Todo = require('../models/learning-stacks-models')
+const LearningStack = require('../models/learning-stacks-models')
+
+// Get request if I can't get it to work
+// module.exports = {
+//     getLearningStacks: (req,res)=>{
+//         res.render('learning-stacks.ejs')
+//     }
+// }
+
+
 
 
 module.exports = {
-    getLearningStacks: (req,res)=>{
-        res.render('learning-stacks.ejs')
-    }
-}
-
-
-
-
-// module.exports = {
-//     getLearningStacks: async (req,res)=>{
-//         try{
-//             const learningStack = await LearningStack.find()
-//             // const itemsLeft = await LearningStack.countDocuments({completed: false})
-//             res.render('learning-stacks-routes.ejs', {LearningStack: learningStacks, left: itemsLeft})
-//         }catch(err){
-//             console.log(err)
-//         }
-//     },
-    // createTodo: async (req, res)=>{
-    //     try{
-    //         await Todo.create({todo: req.body.todoItem, completed: false})
-    //         console.log('Todo has been added!')
-    //         res.redirect('/todos')
-    //     }catch(err){
-    //         console.log(err)
-    //     }
-    // },
+    getLearningStacks: async (req,res)=>{
+        try{
+            const learningStack = await LearningStack.find()
+            // const itemsLeft = await LearningStack.countDocuments({completed: false})
+            res.render('learning-stacks-routes.ejs', {LearningStack: learningStacks, left: itemsLeft})
+        }catch(err){
+            console.log(err)
+        }
+    },
+    createLearningStack: async (req, res)=>{
+        try{
+            await Todo.create({LearningStack: req.body.todoItem, completed: false})
+            console.log('Todo has been added!')
+            res.redirect('/todos')
+        }catch(err){
+            console.log(err)
+        }
+    },
     // markComplete: async (req, res)=>{
     //     try{
     //         await Todo.findOneAndUpdate({_id:req.body.todoIdFromJSFile},{
@@ -61,4 +61,4 @@ module.exports = {
     //         console.log(err)
     //     }
     // }
-// }    
+}    
