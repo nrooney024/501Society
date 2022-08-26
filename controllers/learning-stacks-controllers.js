@@ -22,9 +22,9 @@ module.exports = {
     },
     createLearningStack: async (req, res)=>{
         try{
-            await Todo.create({LearningStack: req.body.todoItem, completed: false})
-            console.log('Todo has been added!')
-            res.redirect('/todos')
+            await LearningStackSchema.create({LearningStack: req.body.learningStackName})
+            console.log('Learning stack has been added!')
+            res.redirect('/learning-stacks')
         }catch(err){
             console.log(err)
         }
