@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 const learningStacksControllers = require('../controllers/learning-stacks-controllers')
 
-router.get('/learning-stacks', learningStacksControllers.getLearningStacks)
+router.get('/', learningStacksControllers.getLearningStacks)
 
 router.post('/createLearningStack', learningStacksControllers.createLearningStack)
 
