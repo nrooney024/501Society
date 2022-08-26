@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 const learningStackPageControllers = require('../controllers/learning-stack-page-controllers')
 
-router.get('/learning-stack-page', learningStackPageControllers.getLearningStackPage)
+router.get('/', learningStackPageControllers.getLearningStackPage)
 
 // router.post('/createTodo', todosController.createTodo)
 
