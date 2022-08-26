@@ -3,7 +3,7 @@ const Todo = require('../models/learning-stacks-models')
 
 module.exports = {
     getLearningStacks: (req,res)=>{
-        res.render('learning-stacks-routes.ejs')
+        res.render('learning-stacks.ejs')
     }
 }
 
