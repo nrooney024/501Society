@@ -5,6 +5,7 @@ const cors = require('cors')
 const mongoose = require('mongoose')
 const MongoClient = require('mongodb').MongoClient
 require('dotenv').config({path: './config/.env'})
+const connectDB = require('./config/database')
 PORT = 80
 
 const homeRoutes = require('./routes/home-routes')
