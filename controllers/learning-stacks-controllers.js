@@ -13,9 +13,10 @@ const LearningStack = require('../models/learning-stacks-models')
 module.exports = {
     getLearningStacks: async (req,res)=>{
         try{
-            const learningStack = await LearningStack.find()
-            // const itemsLeft = await LearningStack.countDocuments({completed: false})
-            res.render('learning-stacks-routes.ejs', {LearningStack: learningStacks, left: itemsLeft})
+            res.render('learning-stacks.ejs')
+            // const learningStack = await LearningStack.find()
+            // // const itemsLeft = await LearningStack.countDocuments({completed: false})
+            // res.render('learning-stacks-routes.ejs', {LearningStack: learningStacks, left: itemsLeft})
         }catch(err){
             console.log(err)
         }
