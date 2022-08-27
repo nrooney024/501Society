@@ -34,7 +34,7 @@ Controller
 - Update this to pull in data from the database (Believe this is done!)
 
 Route
-- Make sure the route is set up to accept this request
+- Make sure the route is set up to accept this request (Believe this is done too!)
 
 EJS
 - Make sure it's accepting the data and displaying it properly
