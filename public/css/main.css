@@ -115,6 +115,7 @@ input, select, textarea {
 		h1 a{
 			font-size: 3em;
 			color: white;
+			line-height: 1.2em;
 		} 	
 
 
@@ -1750,6 +1751,76 @@ input, select, textarea {
 				background-color: #1f232b;
 			}
 
+
+			.add-learning-stack-button{
+				display: block;
+				align-self: flex-start;
+				justify-self: right;
+				width: auto;
+				height: 38px;
+				flex-wrap: nowrap;
+				color: rgba(255, 255, 255, 0.75);
+				background-color: rgba(92, 95, 103, 0.5);
+				border-radius: 0.25em;
+				line-height: 38px;
+				text-align: center;
+				font-size: 14px;
+				margin: 6px 6px 0 0;
+				min-width: .1em;
+				padding: .25em;
+				letter-spacing: 0;
+				line-height: 100%;
+				z-index: 9999;
+				/* Need to make this fixed */
+				/* position: fixed; */
+			}
+
+/* Form  */
+
+.add-learning-stack-form{
+	display: none;
+	position: fixed;
+	/* bottom: 0; */
+	border: 3px solid #f1f1f1;
+	/* z-index: 10; */
+  	padding: 4em;
+  	background-color: white;
+	/* margin-left: 10%; */
+	width: 80%;
+	/* margin-bottom: 40%; */
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 9999;
+}
+
+.add-learning-stack-header{
+	font-size: 2.5em;
+	margin-bottom: 2em;
+}
+
+.form-name{
+	font-weight: bold;
+}
+
+.close-form{
+	justify-self: right;
+	margin-bottom: 5em;
+    margin-left: 75%;
+	background-color: none;
+	color: #919499;
+	text-decoration: underline;
+	
+}
+
+.close-form:hover{
+	text-decoration: none;
+}
+
+.submit-form{
+	margin-top: 3em;
+}
+
 /* List */
 
 	ul {
@@ -2688,7 +2759,7 @@ input, select, textarea {
 				position: fixed;
 				top: 0;
 				width: 100%;
-				z-index: 10001;
+				z-index: 9996;
 				background: none;
 			}
 

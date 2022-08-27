@@ -64,3 +64,42 @@
 				});
 
 })(jQuery);
+
+
+// document.querySelector('.clickToToggleAddLearningStackDisplay').addEventListener('click',toggleAddLearningStackDisplay)
+
+// function toggleAddLearningStackDisplay(){
+// 	let x = document.getElementsByClassName('clickToToggleAddLearningStackDisplay');
+//   	if (x.style.display === "none") {
+//     	x.style.display = "block";
+//   	}else {
+//     	x.style.display = "none";
+//   }
+// }
+
+function openForm() {
+	document.getElementById("addLearningStackForm").style.display = "block";
+  }
+  
+  function closeForm() {
+	document.getElementById("addLearningStackForm").style.display = "none";
+  }
+
+
+//   async function addLearningStack(){
+//     const learningStackId = this.parentNode.dataset.id
+//     try{
+//         const response = await fetch('todos/markComplete', {
+//             method: 'put',
+//             headers: {'Content-type': 'application/json'},
+//             body: JSON.stringify({
+//                 'todoIdFromJSFile': todoId
+//             })
+//         })
+//         const data = await response.json()
+//         console.log(data)
+//         location.reload()
+//     }catch(err){
+//         console.log(err)
+//     }
+// }
