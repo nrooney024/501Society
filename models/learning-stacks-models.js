@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 const LearningStackSchema = new mongoose.Schema({
-  learningStack: {
+  learningStackName: {
     type: String,
     required: true,
   },
