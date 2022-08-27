@@ -23,9 +23,9 @@ module.exports = {
     },
     createLearningStack: async (req, res)=>{
         try{
-            await LearningStackSchema.create({LearningStack: req.body.learningStackName})
+            await LearningStackSchema.create({learningStackName: req.body.learningStackName})
             console.log('Learning stack has been added!')
-            res.redirect('learning-stacks.ejs')
+            res.redirect('/learning-stacks')
         }catch(err){
             console.log(err)
         }
