@@ -31,7 +31,7 @@ Controller
 ######################## Get request steps to show learning stacks: ########################################################################
 
 Controller
-- Update this to pull in data from the database
+- Update this to pull in data from the database (Believe this is done!)
 
 Route
 - Make sure the route is set up to accept this request
