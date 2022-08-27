@@ -1,7 +1,7 @@
 # 501SocietyHeroku2
 
 
-Next Steps:
+################################################ Next Steps: ##################################################################
 
 8.25.22
 - Fix post request for new learning stacks
@@ -12,7 +12,7 @@ Next Steps:
 
 
 
-Post Request Steps:
+################################################ Post Request Steps: ########################################################################
 
 ejs
 - have form that sends the message to client side javascript
@@ -26,3 +26,15 @@ Route
 
 Controller
 - goes through model to server
+
+
+######################## Get request steps to show learning stacks: ########################################################################
+
+Controller
+- Update this to pull in data from the database
+
+Route
+- Make sure the route is set up to accept this request
+
+EJS
+- Make sure it's accepting the data and displaying it properly
