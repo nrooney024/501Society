@@ -1,14 +1,5 @@
 const LearningStack = require('../models/learning-stacks-models')
 
-// Get request if I can't get it to work
-// module.exports = {
-//     getLearningStacks: (req,res)=>{
-//         res.render('learning-stacks.ejs')
-//     }
-// }
-
-
-
 
 module.exports = {
     getLearningStacks: async (req,res)=>{
