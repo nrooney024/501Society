@@ -5,7 +5,7 @@ module.exports = {
     getLearningStacks: async (req,res)=>{
         try{
             const learningStack = await LearningStack.find()
-            res.render('/learning-stacks', {learningStacks: learningStack})
+            res.render('learning-stacks.ejs', {learningStacks: learningStack})
         }catch(err){
             console.log(err)
         }
