@@ -80,12 +80,14 @@
 										</div>
 									</a>
 
-									<% learningStacks.forEach( el => { %>
-										<div class="tiles">
-											<h3><%= el.learningStackName %></h3>
-											<span><%= el.dateCreated %></span>
-										</div>
-									<% }) %>   
+									<div class="tilesContainer">
+										<% learningStacks.forEach( el => { %>
+											<div class="tile">
+												<h3><%= el.learningStackName %></h3>
+												<span><%= el.dateCreated %></span>
+											</div>
+										<% }) %>   
+									</div>
 							</div>
 					</div>
 				</div>
