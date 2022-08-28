@@ -2355,7 +2355,19 @@ input, select, textarea {
 
 /* Tiles */
 
-.tiles img{
+.tilesContainer{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-evenly;
+	align-items: flex-start;
+	align-content: space-around;
+}
+
+.tile{
+	display: flex;
+}
+
+.tile img{
 	max-width: 5em;
 	border-radius: 50%;
 	display: flex;
@@ -2363,11 +2375,11 @@ input, select, textarea {
 	margin: 2em 2em;
 }
 
-.tiles h3{
+.tile h3{
 	font-size: 2em;
 }
 
-.tiles span{
+.tile span{
 	font-style: italic;
 }
 
