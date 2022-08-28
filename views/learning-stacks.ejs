@@ -81,9 +81,9 @@
 									</a>
 
 									<% learningStacks.forEach( el => { %>
-										<!-- <div class='learningStacks' data-id='<%=el._id%>'> -->
+										<div class="tiles">
 											<h3><%= el.learningStackName %></h3>
-											<!-- <span class='del'> Delete </span> -->
+											<span><%= el.dateCreated %></span>
 										</div>
 									<% }) %>   
 							</div>
