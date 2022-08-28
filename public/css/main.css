@@ -2369,7 +2369,7 @@ input, select, textarea {
 	flex-flow: column wrap;
 	align-items: flex-start;
 	align-content: flex-start;
-	max-width: 3em;
+	max-width: 4em;
 	margin: 2em;
 
 }
