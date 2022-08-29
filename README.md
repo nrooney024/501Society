@@ -3,6 +3,11 @@
 
 ################################################ Next Steps: ##################################################################
 
+8.28.22
+- Set up user authentication
+
+
+
 8.25.22
 - Fix post request for new learning stacks
 
@@ -38,3 +43,6 @@ Route
 
 EJS
 - Make sure it's accepting the data and displaying it properly
+
+
+
