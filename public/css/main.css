@@ -2355,7 +2355,26 @@ input, select, textarea {
 
 /* Tiles */
 
-.tiles img{
+.tilesContainer{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-evenly;
+	align-items: flex-start;
+	align-content: space-around;
+	justify-content: flex-start;
+}
+
+.tile{
+	display: flex;
+	flex-flow: column wrap;
+	align-items: flex-start;
+	align-content: flex-start;
+	max-width: 25%;
+	margin: 2em;
+
+}
+
+.tile img{
 	max-width: 5em;
 	border-radius: 50%;
 	display: flex;
@@ -2363,11 +2382,11 @@ input, select, textarea {
 	margin: 2em 2em;
 }
 
-.tiles h3{
+.tile h3{
 	font-size: 2em;
 }
 
-.tiles span{
+.tile span{
 	font-style: italic;
 }
 
