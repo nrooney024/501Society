@@ -7,10 +7,10 @@ const LearningStackSchema = new mongoose.Schema({
   },
   dateCreated: {
     type: Date,
+    default: Date.now
   },
   dateLastOpened: {
     type: Date,
-    default: Date.now
   },
   learningStackList: {
     type: Array
