@@ -72,14 +72,22 @@
 									</nav>	
 
 								<!-- Tiles -->
-									<a href="/learning-stack-page">
+									<!-- <a href="/learning-stack-page">
 										<div class="tiles">
 											<img src="/images/test-tile-img.png" alt="Khan Academy">
 											<h3>Python</h3>
 											<span>Last Opened: June 19th, 2022</span>
 										</div>
-									</a>
+									</a> -->
 
+									<div class="tilesContainer">
+										<% learningStacks.forEach( el => { %>
+											<div class="tile">
+												<h3><%= el.learningStackName %></h3>
+												<span><%= el.dateCreated %></span>
+											</div>
+										<% }) %>   
+									</div>
 							</div>
 					</div>
 				</div>
