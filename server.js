@@ -8,7 +8,7 @@ require('dotenv').config({path: './config/.env'})
 const connectDB = require('./config/database')
 PORT = 80
 
-const homepageRoutes = require('./routes/homepage-routes')
+const mainRoutes = require('./routes/main-routes')
 const learningStacksRoutes = require('./routes/learning-stacks-routes')
 const learningStackPageRoutes = require('./routes/learning-stack-page-routes')
 
@@ -21,7 +21,7 @@ app.use(express.json())
 app.use(cors())
 
 // Routes
-app.use('/homepage', homepageRoutes)
+app.use('/', mainRoutes)
 app.use('/learning-stacks', learningStacksRoutes)
 app.use('/learning-stack-page', learningStackPageRoutes)
 
