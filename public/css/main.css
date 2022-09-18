@@ -1775,6 +1775,11 @@ input, select, textarea {
 				/* position: fixed; */
 			}
 
+
+			.loginSignupButton{
+				z-index: 9999;
+			}
+
 /* Form  */
 
 .add-learning-stack-form{
