@@ -1777,10 +1777,16 @@ input, select, textarea {
 
 
 			.loginSignupButton{
-				z-index: 9999;
-				width: 100%;
-				padding-left: 40%;
-				padding-right: 40%;
+				display: flex;
+				z-index: auto;
+				position: absolute;
+				padding-top: 2em;
+				
+			}
+
+			button.loginSignupButton{
+				display: flex;
+				
 			}
 
 /* Form  */
