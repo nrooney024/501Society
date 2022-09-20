@@ -1,5 +1,6 @@
 const bcrypt = require('bcrypt')
 const mongoose = require('mongoose')
+const LearningStackSchema = require('./learning-stack-models').schema
 
 const UserSchema = new mongoose.Schema({
   userName: {
