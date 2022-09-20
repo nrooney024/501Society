@@ -1775,6 +1775,20 @@ input, select, textarea {
 				/* position: fixed; */
 			}
 
+
+			.loginSignupButton{
+				display: flex;
+				z-index: auto;
+				position: absolute;
+				padding-top: 2em;
+				
+			}
+
+			button.loginSignupButton{
+				display: flex;
+				
+			}
+
 /* Form  */
 
 .add-learning-stack-form{
