@@ -102,12 +102,12 @@ hr {
 .signup__link {
   font-weight: 400;
   font-size: 1.3rem;
-  color: #28966b;
+  color: #444;
   text-decoration: none;
 }
 
 .signup__link:hover {
-  color: #184f42;
+  color: rgb(89, 89, 89);
 }
 
 .password__min-len {
@@ -148,7 +148,7 @@ hr {
   padding: 1rem;
 
   border: none;
-  box-shadow: 0 0.35rem #257866;
+  box-shadow: 0 0.35rem #444;
   position: relative;
   margin-bottom: 2rem;
 }
@@ -156,7 +156,7 @@ hr {
 .login__btn:hover {
   cursor: pointer;
   top: -0.35rem;
-  box-shadow: 0 .7rem #257866;
+  box-shadow: 0 .7rem #444;
 }
 
 /* 
