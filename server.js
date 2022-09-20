@@ -6,11 +6,16 @@ const mongoose = require('mongoose')
 const MongoClient = require('mongodb').MongoClient
 require('dotenv').config({path: './config/.env'})
 const connectDB = require('./config/database')
+const flash = require('express-flash')
+const logger = require('morgan')
 PORT = 80
 
 const mainRoutes = require('./routes/main-routes')
 const learningStacksRoutes = require('./routes/learning-stacks-routes')
 const learningStackPageRoutes = require('./routes/learning-stack-page-routes')
+
+// Passport config
+require('./config/passport')(passport)
 
 connectDB()
 
@@ -19,6 +24,23 @@ app.use(express.static('public'))
 app.use(express.urlencoded({extended:true}))
 app.use(express.json())
 app.use(cors())
+app.use(logger('dev'))
+
+// Sessions
+app.use(
+    session({
+      secret: 'keyboard cat',
+      resave: false,
+      saveUninitialized: false,
+      store: new MongoStore({ mongooseConnection: mongoose.connection }),
+    })
+  )
+  
+// Passport middleware
+app.use(passport.initialize())
+app.use(passport.session())
+
+app.use(flash())
 
 // Routes
 app.use('/', mainRoutes)
