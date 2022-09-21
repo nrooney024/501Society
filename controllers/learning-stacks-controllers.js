@@ -1,4 +1,4 @@
-const LearningStack = require('../models/learning-stacks-models')
+const LearningStack = require('../models/Learning-stacks-models')
 
 
 module.exports = {
