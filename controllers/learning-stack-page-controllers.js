@@ -1,4 +1,4 @@
-const Todo = require('../models/learning-stacks-models')
+const Todo = require('../models/Learning-stacks-models')
 
 module.exports = {
     getLearningStackPage: (req,res)=>{
