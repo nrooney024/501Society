@@ -82,12 +82,16 @@
 									</a> -->
 
 									<div class="tilesContainer">
-										<% learningStacks.forEach( el => { %>
-											<div class="tile">
-												<h3><%= el.learningStackName %></h3>
-												<span><%= el.dateCreated %></span>
-											</div>
-										<% }) %>   
+										
+										<% for(var i=0; i<learningStacks.length; i++) {%>						
+											  <!-- <a href="/post/<%= posts[i]._id%>"> -->
+												<div class="tile">
+													<h3><%= learningStacks[i].learningStackName %></h3>
+													<span><%= learningStacks[i].dateCreated %></span>
+												</div>
+											  <!-- </a> -->
+										  <% } %>
+
 									</div>
 							</div>
 					</div>
