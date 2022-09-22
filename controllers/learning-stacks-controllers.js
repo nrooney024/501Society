@@ -1,18 +1,26 @@
 const LearningStack = require('../models/Learning-stacks-models')
+const User = require('../models/User')
 
 
 module.exports = {
     getLearningStacks: async (req,res)=>{
         try{
-            const learningStack = await LearningStack.find()
-            res.render('learning-stacks.ejs', {learningStacks: learningStack})
-        }catch(err){
+            const user = await User.findById(req.user.id);
+            const learningResourcesList = user.learningStackArray
+            res.render('learning-stacks.ejs', {learningStacks: learningResourcesList})
+        }catch(err){ 
             console.log(err)
         }
     },
     createLearningStack: async (req, res)=>{
         try{
-            await LearningStack.create({learningStackName: req.body.learningStackName})
+            const user = await User.findById(req.user.id);
+            console.log(`User: ${user}`)
+            const learningResourcesList = user.learningStackArray
+            console.log(`learningResourcesList: ${learningResourcesList}`)
+            learningResourcesList.push({
+                learningStackName: req.body.learningStackName,
+            })
             console.log('Learning stack has been added!')
             res.redirect('/learning-stacks')
         }catch(err){
