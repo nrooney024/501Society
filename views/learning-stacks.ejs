@@ -85,10 +85,12 @@
 										
 										<% for(var i=0; i<learningStacks.length; i++) {%>						
 											  
+											<a href="/learningStack/<%= learningStacks[i]._id%>">
 												<div class="tile">
 													<h3><%= learningStacks[i].learningStackName %></h3>
 													<span><%= learningStacks[i].dateCreated %></span>
 												</div>
+											</a>
 											  
 										  <% } %>
 
