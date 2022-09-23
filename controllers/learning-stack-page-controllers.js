@@ -1,10 +1,26 @@
 const Todo = require('../models/Learning-stacks-models')
 
 module.exports = {
-    getLearningStackPage: (req,res)=>{
-        res.render('learning-stack-page.ejs')
+    getLearningStackPage: : async (req,res)=>{
+        try{
+            // Pull user id
+            const user = await User.findById(req.user.id);
+            
+            // Pull logged in user's learning stack array
+            const learningStackArray = user.learningStackArray
+            
+            // Pull specific learning stack
+            const learningStack = learningStackArray.findOne(req.params.id)
+
+            
+
+            res.render('learning-stacks.ejs', {learningStacks: learningStackArray})
+        }catch(err){ 
+            console.log(err)
+        }
     }
 }
+
 
 
 // module.exports = {
