@@ -3,7 +3,7 @@ const router = express.Router()
 const learningStackPageControllers = require('../controllers/learning-stack-page-controllers')
 const { ensureAuth } = require('../middleware/auth')
 
-router.get('/', ensureAuth, learningStackPageControllers.getLearningStackPage)
+router.get('/:id', ensureAuth, learningStackPageControllers.getLearningStackPage)
 
 // router.post('/createTodo', todosController.createTodo)
 
