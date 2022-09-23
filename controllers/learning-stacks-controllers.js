@@ -14,15 +14,20 @@ module.exports = {
     },
     createLearningStack: async (req, res)=>{
         try{
+            // User signed in
             const user = await User.findById(req.user.id);
-            console.log(`User: ${user}`)
-            const learningResourcesList = user.learningStackArray
-            console.log(`learningResourcesList: ${learningResourcesList}`)
-            learningResourcesList.push({
+            
+            // Learning stack array of the user signed in
+            const learningStackArray = user.learningStackArray
+            
+            // Adding new learning stack from form
+            learningStackArray.push({
                 learningStackName: req.body.learningStackName,
+                learningResourcesList: []
             })
             console.log('Learning stack has been added!')
             res.redirect('/learning-stacks')
+            user.save()
         }catch(err){
             console.log(err)
         }
