@@ -6,8 +6,8 @@ module.exports = {
     getLearningStacks: async (req,res)=>{
         try{
             const user = await User.findById(req.user.id);
-            const learningResourcesList = user.learningStackArray
-            res.render('learning-stacks.ejs', {learningStacks: learningResourcesList})
+            const learningStackArray = user.learningStackArray
+            res.render('learning-stacks.ejs', {learningStacks: learningStackArray})
         }catch(err){ 
             console.log(err)
         }
