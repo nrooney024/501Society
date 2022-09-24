@@ -18,12 +18,8 @@ const UserSchema = new mongoose.Schema({
     required: true,
   },
   learningStackArray: {
-    type: [LearningStackSchema],
-    required: true
-  },
-  learningStackArray: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "LearningStack",
+    type: [{type: mongoose.Schema.Types.ObjectId, ref: "LearningStack"}],
+    required: true,
   },
   uniqueDatesLoggedIn: {
     type: [String],

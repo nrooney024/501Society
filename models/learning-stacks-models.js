@@ -1,11 +1,6 @@
 const mongoose = require('mongoose')
-const User = require('./User').schema
 
 const LearningResourcesSchema = new mongoose.Schema({
-  user: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "User",
-  },
   learningResourceName: {
     type: String,
     required: true,
@@ -34,10 +29,6 @@ const LearningResourcesSchema = new mongoose.Schema({
 
 
 const LearningStackSchema = new mongoose.Schema({
-  user: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "User",
-  },
   learningStackName: {
     type: String,
     required: true,
@@ -50,10 +41,12 @@ const LearningStackSchema = new mongoose.Schema({
     type: Date,
   },
   learningResourcesList: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "LearningResourcesSchema",
-  },
+    type: [{type: mongoose.Schema.Types.ObjectId, ref: "LearningResources"}],
+  }
 })
 
 
-module.exports = mongoose.model('LearningStack', LearningStackSchema)
+const LearningStackExport = mongoose.model('LearningStack', LearningStackSchema)
+const LearningResourcesExport = mongoose.model('LearningResources', LearningResourcesSchema)
+
+module.exports = {LearningStackExport, LearningResourcesExport}
