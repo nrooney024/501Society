@@ -1,10 +1,42 @@
-const Todo = require('../models/Learning-stacks-models')
+const {LearningStackExport, LearningResourcesExport} = require('../models/Learning-stacks-models')
+const User = require('../models/User')
 
 module.exports = {
-    getLearningStackPage: (req,res)=>{
-        res.render('learning-stack-page.ejs')
+    getLearningStackPage: async (req,res)=>{
+        try{
+            // Pull user id
+            const user = await User.findById(req.user.id).populate('learningStackArray');
+            // console.log(`******user: ${user}`)
+
+
+            // Pull logged in user's learning stack array
+            const learningStackArray = user.learningStackArray
+            // console.log(`******learningStackArray: ${learningStackArray}`)
+            // console.log(`******param: ${req.params.id}`)
+
+            console.log(`******typeof learningStackArray: ${typeof learningStackArray}`)
+
+            // Pull specific learning stack
+            const learningStack = await LearningStackExport.findById(req.params.id)
+            
+            // Learning stack details
+            const learningStackName = learningStack.learningStackName
+            console.log(`******learningStack: ${learningStack}`)
+            console.log(`******learningStackName: ${learningStackName}`)
+
+            res.render('learning-stack-page.ejs',
+            {
+                learningStacks: learningStackArray,
+                learningStackName: learningStackName
+            })
+
+            // user.save()
+        }catch(err){ 
+            console.log(err)
+        }
     }
 }
+
 
 
 // module.exports = {
