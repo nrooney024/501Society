@@ -41,9 +41,12 @@ const LearningStackSchema = new mongoose.Schema({
     type: Date,
   },
   learningResourcesList: {
-    type: [LearningResourcesSchema]
+    type: [{type: mongoose.Schema.Types.ObjectId, ref: "LearningResources"}],
   }
 })
 
 
-module.exports = mongoose.model('LearningStack', LearningStackSchema)
+const LearningStackExport = mongoose.model('LearningStack', LearningStackSchema)
+const LearningResourcesExport = mongoose.model('LearningResources', LearningResourcesSchema)
+
+module.exports = {LearningStackExport, LearningResourcesExport}
