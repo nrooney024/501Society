@@ -1,11 +1,11 @@
-const LearningStack = require('../models/Learning-stacks-models')
+const {LearningStackExport, LearningResourcesExport} = require('../models/Learning-stacks-models')
 const User = require('../models/User')
 
 module.exports = {
     getLearningStackPage: async (req,res)=>{
         try{
             // Pull user id
-            const user = await User.findById(req.user.id);
+            const user = await User.findById(req.user.id).populate('learningStackArray');
             // console.log(`******user: ${user}`)
 
 
@@ -14,20 +14,23 @@ module.exports = {
             // console.log(`******learningStackArray: ${learningStackArray}`)
             // console.log(`******param: ${req.params.id}`)
 
+            console.log(`******typeof learningStackArray: ${typeof learningStackArray}`)
 
             // Pull specific learning stack
-            const learningStack = learningStackArray.findOne(req.params.id)
-            // console.log(`******learningStack: ${learningStack}`)
-
+            const learningStack = await LearningStackExport.findById(req.params.id)
+            
             // Learning stack details
             const learningStackName = learningStack.learningStackName
             console.log(`******learningStack: ${learningStack}`)
             console.log(`******learningStackName: ${learningStackName}`)
 
-            res.render('learning-stack-page.ejs',{
+            res.render('learning-stack-page.ejs',
+            {
                 learningStacks: learningStackArray,
                 learningStackName: learningStackName
             })
+
+            // user.save()
         }catch(err){ 
             console.log(err)
         }
