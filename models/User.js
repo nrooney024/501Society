@@ -21,6 +21,10 @@ const UserSchema = new mongoose.Schema({
     type: [LearningStackSchema],
     required: true
   },
+  learningStackArray: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "LearningStack",
+  },
   uniqueDatesLoggedIn: {
     type: [String],
     required: true,
