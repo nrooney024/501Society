@@ -16,7 +16,7 @@ module.exports = {
 
 
             // Pull specific learning stack
-            const learningStack = LearningStack.findById(req.params.id)
+            const learningStack = learningStackArray.findOne(req.params.id)
             // console.log(`******learningStack: ${learningStack}`)
 
             // Learning stack details
