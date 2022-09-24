@@ -1,6 +1,11 @@
 const mongoose = require('mongoose')
+const User = require('./User').schema
 
 const LearningResourcesSchema = new mongoose.Schema({
+  user: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User",
+  },
   learningResourceName: {
     type: String,
     required: true,
@@ -29,6 +34,10 @@ const LearningResourcesSchema = new mongoose.Schema({
 
 
 const LearningStackSchema = new mongoose.Schema({
+  user: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User",
+  },
   learningStackName: {
     type: String,
     required: true,
@@ -41,8 +50,9 @@ const LearningStackSchema = new mongoose.Schema({
     type: Date,
   },
   learningResourcesList: {
-    type: [LearningResourcesSchema]
-  }
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "LearningResourcesSchema",
+  },
 })
 
 
