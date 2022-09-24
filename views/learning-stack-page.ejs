@@ -42,9 +42,33 @@
 							</ul>
 						</nav>
 
+						<button type="button" class="add-learning-stack-button" onclick="openForm()" >Add Learning Resource +</button>
+
 				</section>
 
-			<!-- Nav Bar -->
+			
+				<!-- Add learning resource popup -->
+		
+				<form action="/learning-stacks/createLearningStack" method='POST' class="add-learning-stack-form" id="addLearningStackForm">
+					<button class="close-form" onclick="closeForm()">Close</button>
+					<br>
+					<h2 class="add-learning-stack-header">Add a Learning Resource</h2>
+
+					<!-- Learning Resource Name -->
+					<label for="learning-resource-name" class="form-name">Learning Resource Name
+					<input type="text" placeholder="Enter the Name of Your Learning Resource" name="learningResourceName">
+					</label>
+
+					
+					<!-- Link to Learning Resource -->
+					<label for="learning-resource-link" class="form-name">Link to Learning Resource
+					<br><input type="url" placeholder="Enter the URL of the Learning Resource" name="learningResourceLink" class="enter-url">
+					</label>
+
+					<br>
+
+					<input type="submit" value="Submit" class="submit-form">
+				</form>
 
 				
 
