@@ -81,69 +81,21 @@
 							<div id="content">
 
 								<!-- Courses -->
-								<div class="course">
-									<!-- <a href="https://youtu.be/rfscVS0vtbw" target="_blank"><img src="/images/course-image.jpg" alt="Course image"></a> -->
-									<a href="https://youtu.be/rfscVS0vtbw" target="_blank"><h3>freeCodeCamp.org — Learn Python - Full Course for Beginners [Tutorial]</h3></a>
-									<span class="courseType">YouTube</span>
-									<span class="dueDate">July 4th, 2022</span>
-									<div class="courseLinks">
-										<a href="#"><i class="fa-solid fa-book" alt="Notes"></i> Notes</a>
-										<a href="#"><i class="fa-solid fa-link"></i> Important Links</a>
-										<a href="#"><i class="fa-solid fa-caret-down"></i> In Progress</a>
-										<a href="#"><i class="fa-solid fa-bell"></i> Reminders</a>
-										<a href="#"><i class="fa-solid fa-square-share-nodes"></i> Share</a>
+								<% for(var i=0; i<learningResources.length; i++) {%>		
+									<div class="course">
+										<!-- <a href="https://youtu.be/rfscVS0vtbw" target="_blank"><img src="/images/course-image.jpg" alt="Course image"></a> -->
+										<a href="<%= learningResources[i].urlToResource %>" target="_blank"><h3><%= learningResources[i].learningResourceName %></h3></a>
+										<!-- <span class="courseType">YouTube</span> -->
+										<!-- <span class="dueDate">July 4th, 2022</span> -->
+										<!-- <div class="courseLinks">
+											<a href="#"><i class="fa-solid fa-book" alt="Notes"></i> Notes</a>
+											<a href="#"><i class="fa-solid fa-link"></i> Important Links</a>
+											<a href="#"><i class="fa-solid fa-caret-down"></i> Not Yet Completed</a>
+											<a href="#"><i class="fa-solid fa-bell"></i> Reminders</a>
+											<a href="#"><i class="fa-solid fa-square-share-nodes"></i> Share</a>
+										</div> -->
 									</div>
-								</div>
-								
-								<!-- "Up Next" Header -->
-								<h2 class="pageBreakHeader spaceAboveAndBelow">Up Next...</h2>
-
-								<!-- Courses that are up next -->
-
-								<!-- Example Course 1 -->
-								<div class="course">
-									<a href="https://youtu.be/rfscVS0vtbw" target="_blank"><img src="/images/course-image.jpg" alt="Course image"></a>
-									<a href="https://youtu.be/rfscVS0vtbw" target="_blank"><h3>freeCodeCamp.org — Learn Python - Full Course for Beginners [Tutorial]</h3></a>
-									<span class="courseType">YouTube</span>
-									<span class="dueDate">July 4th, 2022</span>
-									<div class="courseLinks">
-										<a href="#"><i class="fa-solid fa-book" alt="Notes"></i> Notes</a>
-										<a href="#"><i class="fa-solid fa-link"></i> Important Links</a>
-										<a href="#"><i class="fa-solid fa-caret-down"></i> Not Yet Completed</a>
-										<a href="#"><i class="fa-solid fa-bell"></i> Reminders</a>
-										<a href="#"><i class="fa-solid fa-square-share-nodes"></i> Share</a>
-									</div>
-								</div>
-
-								<!-- Example Course 2 -->
-								<div class="course">
-									<a href="https://youtu.be/rfscVS0vtbw" target="_blank"><img src="/images/course-image.jpg" alt="Course image"></a>
-									<a href="https://youtu.be/rfscVS0vtbw" target="_blank"><h3>freeCodeCamp.org — Learn Python - Full Course for Beginners [Tutorial]</h3></a>
-									<span class="courseType">YouTube</span>
-									<span class="dueDate">July 4th, 2022</span>
-									<div class="courseLinks">
-										<a href="#"><i class="fa-solid fa-book" alt="Notes"></i> Notes</a>
-										<a href="#"><i class="fa-solid fa-link"></i> Important Links</a>
-										<a href="#"><i class="fa-solid fa-caret-down"></i> Not Yet Completed</a>
-										<a href="#"><i class="fa-solid fa-bell"></i> Reminders</a>
-										<a href="#"><i class="fa-solid fa-square-share-nodes"></i> Share</a>
-									</div>
-								</div>
-
-								<!-- Example Course 3 -->
-								<div class="course">
-									<a href="https://youtu.be/rfscVS0vtbw" target="_blank"><img src="/images/course-image.jpg" alt="Course image"></a>
-									<a href="https://youtu.be/rfscVS0vtbw" target="_blank"><h3>freeCodeCamp.org — Learn Python - Full Course for Beginners [Tutorial]</h3></a>
-									<span class="courseType">YouTube</span>
-									<span class="dueDate">July 4th, 2022</span>
-									<div class="courseLinks">
-										<a href="#"><i class="fa-solid fa-book" alt="Notes"></i> Notes</a>
-										<a href="#"><i class="fa-solid fa-link"></i> Important Links</a>
-										<a href="#"><i class="fa-solid fa-caret-down"></i> Not Yet Completed</a>
-										<a href="#"><i class="fa-solid fa-bell"></i> Reminders</a>
-										<a href="#"><i class="fa-solid fa-square-share-nodes"></i> Share</a>
-									</div>
-								</div>
+								<% } %>								  
 
 							</div>
 					</div>
