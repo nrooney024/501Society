@@ -31,7 +31,6 @@ const LearningResourcesSchema = new mongoose.Schema({
 const LearningStackSchema = new mongoose.Schema({
   learningStackName: {
     type: String,
-    required: true,
   },
   dateCreated: {
     type: Date,
