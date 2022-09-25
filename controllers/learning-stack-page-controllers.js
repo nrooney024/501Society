@@ -4,6 +4,9 @@ const User = require('../models/User')
 module.exports = {
     getLearningStackPage: async (req,res)=>{
         try{
+            
+            // ########### Learning Stack Info ###########
+            
             // Pull user id
             const user = await User.findById(req.user.id).populate('learningStackArray');
 
@@ -11,16 +14,21 @@ module.exports = {
             const learningStackArray = user.learningStackArray
 
             // Pull specific learning stack
-            const learningStack = await LearningStackExport.findById(req.params.id)
+            const learningStack = await LearningStackExport.findById(req.params.id).populate('learningResourcesList')
             
             // Learning stack details
             const learningStackName = learningStack.learningStackName
+
+            
+            const learningResourceList = learningStack.learningResourcesList
+
 
             res.render('learning-stack-page.ejs',
             {
                 learningStacks: learningStackArray,
                 learningStackName: learningStackName,
-                learningStackId: req.params.id
+                learningStackId: req.params.id,
+                learningResources: learningResourceList
             })
 
         }catch(err){ 
