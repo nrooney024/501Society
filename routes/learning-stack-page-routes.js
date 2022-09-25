@@ -5,7 +5,7 @@ const { ensureAuth } = require('../middleware/auth')
 
 router.get('/:id', ensureAuth, learningStackPageControllers.getLearningStackPage)
 
-// router.post('/createTodo', todosController.createTodo)
+router.post('/createLearningResource/:id', learningStackPageControllers.createLearningResource)
 
 // router.put('/markComplete', todosController.markComplete)
 
