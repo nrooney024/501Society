@@ -11,7 +11,6 @@ const logger = require('morgan')
 const passport = require('passport')
 const session = require('express-session')
 const MongoStore = require('connect-mongo')
-PORT = 80
 
 const mainRoutes = require('./routes/main-routes')
 const learningStacksRoutes = require('./routes/learning-stacks-routes')
