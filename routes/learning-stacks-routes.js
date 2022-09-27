@@ -7,10 +7,6 @@ router.get('/', ensureAuth, learningStacksControllers.getLearningStacks)
 
 router.post('/createLearningStack', learningStacksControllers.createLearningStack)
 
-// router.put('/markComplete', todosController.markComplete)
-
-// router.put('/markIncomplete', todosController.markIncomplete)
-
-// router.delete('/deleteTodo', todosController.deleteTodo)
+router.delete('/deleteLearningStack', learningStacksControllers.deleteLearningStack)
 
 module.exports = router
