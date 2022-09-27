@@ -38,4 +38,14 @@ module.exports = {
             console.log(err)
         }
     },
+    deleteLearningStack: async (req, res) => {
+        try {
+          // Delete learning stack from db
+          await LearningStackExport.remove({ _id: req.params.id });
+          console.log("Deleted Post");
+          res.redirect("/learning-stacks");
+        } catch (err) {
+          res.redirect("/learning-stacks");
+        }
+      },
 }    
