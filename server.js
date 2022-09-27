@@ -11,6 +11,7 @@ const logger = require('morgan')
 const passport = require('passport')
 const session = require('express-session')
 const MongoStore = require('connect-mongo')
+const methodOverride = require("method-override");
 
 const mainRoutes = require('./routes/main-routes')
 const learningStacksRoutes = require('./routes/learning-stacks-routes')
@@ -27,6 +28,9 @@ app.use(express.urlencoded({extended:true}))
 app.use(express.json())
 app.use(cors())
 app.use(logger('dev'))
+
+//Use forms for put / delete
+app.use(methodOverride("_method"));
 
 // Sessions
 app.use(
