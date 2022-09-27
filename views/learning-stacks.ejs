@@ -84,19 +84,21 @@
 									<div class="tilesContainer">
 										
 										<% for(var i=0; i<learningStacks.length; i++) {%>						
-											  
-											<a href="/learning-stack-page/<%= learningStacks[i]._id%>">
-												<div class="tile">
-													<h3><%= learningStacks[i].learningStackName %></h3>
-													<span><%= learningStacks[i].dateCreated %></span>
-												</div>
-											</a>
+												
+											<div class="tile">
+												<a href="/learning-stack-page/<%= learningStacks[i]._id%>">
+													
+														<h3><%= learningStacks[i].learningStackName %></h3>
+														<span><%= learningStacks[i].dateCreated %></span>
+													
+												</a>
 
-											<form
-												action="/learning-stacks/deleteLearningStack/<%= learningStacks[i].id %>?_method=DELETE"
-												method="POST">
-												<button class="btn btn-primary fa fa-trash" type="submit"></button>
-										 	 </form>
+												<form
+													action="/learning-stacks/deleteLearningStack/<%= learningStacks[i].id %>?_method=DELETE"
+													method="POST">
+													<button class="btn btn-primary fa fa-trash" type="submit"></button>
+													</form>
+											</div>
 											  
 										  <% } %>
 
