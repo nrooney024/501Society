@@ -7,10 +7,6 @@ router.get('/:id', ensureAuth, learningStackPageControllers.getLearningStackPage
 
 router.post('/createLearningResource/:id', learningStackPageControllers.createLearningResource)
 
-// router.put('/markComplete', todosController.markComplete)
-
-// router.put('/markIncomplete', todosController.markIncomplete)
-
-// router.delete('/deleteTodo', todosController.deleteTodo)
+router.delete('/deleteLearningResource/:id', learningStackPageControllers.deleteLearningResource)
 
 module.exports = router
