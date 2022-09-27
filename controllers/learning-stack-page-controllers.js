@@ -67,4 +67,14 @@ module.exports = {
             console.log(err)
         }
     },
+    deleteLearningResource: async (req, res) => {
+        try {
+            // Delete learning stack from db
+            await LearningResourcesExport.remove({ _id: req.params.id });
+            console.log("Deleted Post");
+            res.redirect(req.get('referer'));
+        } catch (err) {
+            res.redirect(req.get('referer'));
+        }
+      },
 }
