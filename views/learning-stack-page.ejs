@@ -94,6 +94,11 @@
 											<a href="#"><i class="fa-solid fa-bell"></i> Reminders</a>
 											<a href="#"><i class="fa-solid fa-square-share-nodes"></i> Share</a>
 										</div> -->
+										<form
+											action="/learning-stack-page/deleteLearningResource/<%= learningResources[i].id %>?_method=DELETE"
+											method="POST">
+											<button class="btn btn-primary fa fa-trash" type="submit"></button>
+										</form>
 									</div>
 								<% } %>								  
 
