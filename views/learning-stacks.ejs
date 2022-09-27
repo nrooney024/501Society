@@ -91,6 +91,12 @@
 													<span><%= learningStacks[i].dateCreated %></span>
 												</div>
 											</a>
+
+											<form
+												action="/learning-stacks/deletePost/<%= learningStacks[i].id %>?_method=DELETE"
+												method="POST">
+												<button class="btn btn-primary fa fa-trash" type="submit"></button>
+										 	 </form>
 											  
 										  <% } %>
 
