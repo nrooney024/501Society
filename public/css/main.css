@@ -118,7 +118,6 @@ input, select, textarea {
 			line-height: 1.2em;
 		} 	
 
-
 		h2 a, h3 a, h4 a, h5 a, h6 a {
 			color: inherit;
 			text-decoration: none;
@@ -1776,18 +1775,34 @@ input, select, textarea {
 			}
 
 
-			.loginSignupButton{
-				display: flex;
-				z-index: auto;
-				position: absolute;
-				padding-top: 2em;
-				
-			}
 
-			button.loginSignupButton{
-				display: flex;
-				
-			}
+/* Header container */
+
+.headerContainer{
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	
+}
+
+.headerContainer h1{
+	display: flex;
+	font-size: 8em;
+	color: white;
+}
+
+.loginSignupButton{
+	display: flex;
+	z-index: 9999;
+	align-self: center;
+	margin-top: 5%;
+	
+
+}
+
+button.loginSignupButton{
+	display: flex;
+}
 
 /* Form  */
 
@@ -2157,7 +2172,7 @@ input, select, textarea {
 		justify-content: center;
 		position: relative;
 		height: 24em;
-		background: url("../../images/banner.jpg") center center;
+		background: url("../../images/501-society-background.png") center center;
 		background-size: cover;
 		padding: 0;
 	}
@@ -2188,13 +2203,25 @@ input, select, textarea {
 	}
 
 		#logo h1 {
+			display: flex;
 			font-weight: 900;
 			text-transform: uppercase;
 			color: #fff;
-			font-size: 2em;
+			font-size: 5em;
 			letter-spacing: 0.25em;
-			font-family: 'Exo', sans-serif;
-			margin-top: 2em;
+			font-family: 'Michroma', sans-serif;
+			position: absolute;
+			align-self: center;
+			justify-self: center;
+		}
+
+		#pageHeader h1{
+			display: flex;
+			color: white;
+			font-size: 5em;
+			position: sticky;
+			align-self: center;
+			justify-self: center;
 		}
 
 		#logo p {
@@ -2340,6 +2367,7 @@ input, select, textarea {
 			.dropotron li:hover > a, .dropotron li:hover > span {
 				color: #fff;
 			}
+
 
 /*  Horizontal Nav Bar  */
 
