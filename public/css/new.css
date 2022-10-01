@@ -1,8 +1,7 @@
 html{
     min-height: 100%;
     min-width: 100%;
-    background: url("../../images/501-society-motion-background.gif") no-repeat center center fixed;
-    /* background: url("../../images/501-society-background.png") no-repeat center center fixed; */
+    background: url("../../images/501-Society-homepage-background.png") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -10,51 +9,62 @@ html{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
+}
+
+body{
+    min-height: 100%;
+    min-width: 100%;
+    margin: 0;
 }
 
 .hero{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
-    
+    justify-content: left;
+    flex-wrap: wrap;
+    max-width: 50%;
+    padding: 1em;
+    padding-left: 10em;
 }
 
 .hero h1{
     display: flex;
     font-family: 'Lobster', cursive;
-    color: white;
-    font-size: 10em;
-    margin-bottom: .5em;
-    margin-top: 0;
-    
+    color: #ffe7c9;
+    font-size: 7em;
+    margin-bottom: .25em;
+    margin-top: 0;   
 }
 
 .hero span{
     display: flex;
-    color: white;
-    font-size: 2.5em;
+    color: #ffe7c9;
+    font-size: 2em;
     font-family: 'Space Mono', monospace;
-    max-width: 50%;
-    text-align: center;
+    /* max-width: 50%; */
+    text-align: left;
 }
 
 .hero button{
     display: flex;
-    max-width: 50%;
+    max-width: 40%;
     font-size: 2em;
     margin-top: .5em;
     border: none;
+    color: #ffe7c9;
     font-family: 'Space Mono', monospace;
-    background-color: aqua;
-    box-shadow: 10px 5px 5px rgb(0, 130, 130);
-    padding: .25em;
+    background-color: #142343;
+    box-shadow: 10px 5px 5px black;
+    padding: .5em;
+    border-radius: 15px 15px;
 }
 
 
 a:-webkit-any-link {
     text-decoration: none;
+    color: #ffe7c9;
 }
 
 .hero button:hover{
@@ -65,13 +75,13 @@ a:-webkit-any-link {
 a.navButton{
     display: flex;
     flex-direction: row-reverse;
-    color: aqua;
+    color: #ffe7c9;
     font-size: 1.5em;
     font-family: 'Space Mono', monospace;
-    justify-self: flex-end;
     text-decoration: underline; 
     align-self: flex-start;
-    
+    margin-right: 2em;
+ 
 }
 
 a.navButton:hover{
