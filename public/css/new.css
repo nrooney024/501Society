@@ -68,6 +68,14 @@ a:-webkit-any-link {
     color: #ffe7c9;
 }
 
+a:-webkit-any-link.titleLink {
+    text-decoration: underline;
+}
+
+a:-webkit-any-link.titleLink:hover {
+    text-decoration: none;
+}
+
 .hero button:hover{
     text-decoration: underline;
     
