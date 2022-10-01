@@ -29,6 +29,7 @@ hr {
 .login__subheading {
   margin-top: 2rem;
   margin-bottom: 0.5rem;
+  font-family: 'Space Mono', monospace;
 }
 
 .login__btn {
