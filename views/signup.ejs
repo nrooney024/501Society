@@ -20,44 +20,46 @@
 		<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Space+Mono&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div class="signup__text-container">
-            <header class="signup__header">
-                <a href="/"><div class="signup__logo"></div></a>
-                <h2 class="login__redirect">
-                    Already a user?
-                    <a class="login__link" href="/login">Login now</a>
-                </h2>
-            </header>
-            <div class="signup__form-container">
-                <h1 class="signup__title">Sign Up with <a href="/" class="titleLink">5:01 Society</a></h1>
-                <hr>
-                <form action="/signup" method="POST">
-                    <ul class="signup__list">
-                        <li class="signup__listitem">
-                            <h3 class="signup__subheading">Username:</h3>
-                            <input class="signup__input" type="text" name="userName">
-                        </li>
-                        <li class="signup__listitem">
-                            <h3 class="signup__subheading">Email:</h3>
-                            <input class="signup__input" type="email" name="email">
-                        </li>
-                        <li class="signup__listitem">
-                            <h3 class="signup__subheading">
-                                Password
-                                <span class="password__min-len">(8 character min.)</span>
-                                :
-                            </h3>
-                            <input class="signup__input" type="password" name="password">
-                        </li>
-                        <li class="signup__listitem">
-                            <h3 class="signup__subheading">Confirm Password:</h3>
-                            <input class="signup__input" type="password" name="confirmPassword">
-                        </li>
-                        <li class="signup__listitem">
-                            <input class="signup__btn" type="submit" value="Signup">
-                        </li>
-                    </ul>
-                </form>
+        <div class="container background-1">
+            <div class="signup__text-container">
+                <header class="signup__header">
+                    <a href="/"><div class="signup__logo"></div></a>
+                    <h2 class="login__redirect">
+                        Already a user?
+                        <a class="login__link" href="/login">Login now</a>
+                    </h2>
+                </header>
+                <div class="signup__form-container">
+                    <h1 class="signup__title">Sign Up with <a href="/" class="titleLink">5:01 Society</a></h1>
+                    <hr>
+                    <form action="/signup" method="POST">
+                        <ul class="signup__list">
+                            <li class="signup__listitem">
+                                <h3 class="signup__subheading">Username:</h3>
+                                <input class="signup__input" type="text" name="userName">
+                            </li>
+                            <li class="signup__listitem">
+                                <h3 class="signup__subheading">Email:</h3>
+                                <input class="signup__input" type="email" name="email">
+                            </li>
+                            <li class="signup__listitem">
+                                <h3 class="signup__subheading">
+                                    Password
+                                    <span class="password__min-len">(8 character min.)</span>
+                                    :
+                                </h3>
+                                <input class="signup__input" type="password" name="password">
+                            </li>
+                            <li class="signup__listitem">
+                                <h3 class="signup__subheading">Confirm Password:</h3>
+                                <input class="signup__input" type="password" name="confirmPassword">
+                            </li>
+                            <li class="signup__listitem">
+                                <input class="signup__btn" type="submit" value="Signup">
+                            </li>
+                        </ul>
+                    </form>
+                </div>
             </div>
         </div>
     </body>
