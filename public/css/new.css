@@ -162,6 +162,7 @@ a.navButton:hover{
     width: 100vh;
     justify-items: flex-start;
     margin-bottom: 15rem;
+    align-items: flex-start;
 }
 
 .tile{
@@ -173,10 +174,14 @@ a.navButton:hover{
 .tile h3{
     font-size: 3rem;
     margin-bottom: .5rem;
+    font-family: 'Space Mono', monospace;
+    color: #ffe7c9;
 }
 
 .tile span{
     font-size: 1.5rem;
+    font-family: 'Space Mono', monospace;
+    color: #ffe7c9;
 }
 
 nav.filters{
@@ -191,6 +196,8 @@ nav.filters{
     padding: 3rem;
     border-radius: 15px 15px;
     margin-top: 3rem;
+    font-family: 'Space Mono', monospace;
+    color: #ffe7c9;
 }
 
 nav.filters a{
