@@ -1,48 +1,64 @@
 html{
+    font-size: 62.5%;
     min-height: 100%;
     min-width: 100%;
-    background: url("../../images/501-Society-homepage-background.png") no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    background-color: #348d9d;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+.container{
+    min-height: 100%;
+    min-width: 100%;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: left;
 }
 
-body{
-    min-height: 100%;
-    min-width: 100%;
-    margin: 0;
+.container.background-1{
+    background: url("../../images/501-Society-homepage-background.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position:absolute;
+    top:0px;
+    right:0px;
+    bottom:0px;
+    left:0px;
 }
 
-.hero{
+/* Hero */
+
+.container.background-1 .hero{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: left;
     flex-wrap: wrap;
     max-width: 50%;
-    padding: 1em;
-    padding-left: 10em;
-    margin-top: 15%;
+    min-height: 50%;
+    padding: 10rem;
+    padding-top: 20rem;
 }
 
-.hero h1{
+.container.background-1 .hero h1{
     display: flex;
     font-family: 'Lobster', cursive;
     color: #ffe7c9;
-    font-size: 7em;
-    margin-bottom: .25em;
-    margin-top: 0;   
+    font-size: 10rem; 
+    margin: 0;
 }
 
 .hero span{
     display: flex;
     color: #ffe7c9;
-    font-size: 2em;
+    font-size: 3.5rem;
     font-family: 'Space Mono', monospace;
     /* max-width: 50%; */
     text-align: left;
@@ -51,17 +67,18 @@ body{
 .hero button{
     display: flex;
     max-width: 40%;
-    font-size: 2em;
-    margin-top: .5em;
+    font-size: 3rem;
+    margin-top: .5rem;
     border: none;
     color: #ffe7c9;
     font-family: 'Space Mono', monospace;
     background-color: #142343;
     box-shadow: 10px 5px 5px black;
-    padding: .5em;
+    padding: .5rem;
     border-radius: 15px 15px;
 }
 
+/* Links */
 
 a:-webkit-any-link {
     text-decoration: none;
@@ -85,14 +102,219 @@ a.navButton{
     display: flex;
     flex-direction: row-reverse;
     color: #ffe7c9;
-    font-size: 1.5em;
+    font-size: 1.5rem;
     font-family: 'Space Mono', monospace;
     text-decoration: underline; 
     align-self: flex-start;
-    margin-right: 2em;
+    margin-right: 2rem;
  
 }
 
 a.navButton:hover{
     text-decoration: none;
+}
+
+/* Learning Stack Page */
+
+.container.background-2{
+    background: url("../../images/501-Society-background-2.png");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: static;
+    top:0px;
+    right:0px;
+    bottom:0px;
+    left:0px;
+    min-width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container.background-2 .hero{
+    position: static;
+}
+
+.columnContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.background-2 section.hero h1{
+    position: absolute;
+    left: 66vh;
+    top: 25vh;
+    font-size: 8rem;
+    color: #142343;
+    min-width: 5%;
+    text-align: center;
+    font-family: 'Lobster', cursive;
+}
+
+#tilesContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    width: 100vh;
+    justify-items: flex-start;
+    margin-bottom: 15rem;
+}
+
+.tile{
+    display: flex;
+    flex-direction: column;
+    margin: 3rem;
+}
+
+.tile h3{
+    font-size: 3rem;
+    margin-bottom: .5rem;
+}
+
+.tile span{
+    font-size: 1.5rem;
+}
+
+nav.filters{
+    display: inline-block;
+    flex-direction: row;
+    width: fit-content;
+    justify-self: center;
+    font-size: 2rem;
+    justify-content: space-around;
+    text-align: center;
+    background-color: #142343;
+    padding: 3rem;
+    border-radius: 15px 15px;
+    margin-top: 3rem;
+}
+
+nav.filters a{
+    margin: 3rem;  
+    text-decoration: underline;  
+}
+
+nav.filters a:hover{
+    text-decoration: none;
+}
+
+#nav,
+#nav ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    font-size: 2rem;
+    justify-content: flex-end;
+}
+
+#nav button{
+    justify-self: flex-start;
+}
+
+#nav li{
+    padding-right: 2rem;
+}
+
+#nav li a{
+    text-decoration: underline;
+}
+
+#nav li a:hover{
+    text-decoration: none;
+}
+
+#content{
+    position: static;
+    
+}
+
+/* Add Learning Stack */
+
+.add-learning-stack-button{
+    display: block;
+    align-self: flex-start;
+    width: auto;
+    height: 38px;
+    flex-wrap: nowrap;
+    line-height: 38px;
+    text-align: center;
+    font-size: 14px;
+    margin: 6px;
+    min-width: .1rem;
+    padding: 1rem;
+    letter-spacing: 0;
+    line-height: 100%;
+    z-index: 9999;
+    position: fixed;
+    border: none;
+    color: #ffe7c9;
+    font-family: 'Space Mono', monospace;
+    background-color: #142343;
+    box-shadow: 10px 5px 5px black;
+    padding: .5rem;
+    border-radius: 15px 15px;
+    top: 1rem;
+    left: 0;
+}
+
+.add-learning-stack-button:hover{
+    text-decoration: underline;
+}
+
+.add-learning-stack-form{
+	display: none;
+	position: fixed;
+	/* bottom: 0; */
+	border: 3px solid #f1f1f1;
+	/* z-index: 10; */
+  	padding: 4rem;
+  	background-color: white;
+	/* margin-left: 10%; */
+	width: 80%;
+	/* margin-bottom: 40%; */
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 9999;
+}
+
+.add-learning-stack-header{
+	font-size: 2.5rem;
+	margin-bottom: 2rem;
+}
+
+.form-name{
+	font-weight: bold;
+}
+
+.enter-url{
+	min-width: 100%;
+}
+
+.close-form{
+	justify-self: right;
+	margin-bottom: 5rem;
+    margin-left: 75%;
+	background-color: none;
+	color: #919499;
+	text-decoration: underline;
+	
+}
+
+.close-form:hover{
+	text-decoration: none;
+}
+
+.submit-form{
+	margin-top: 3rem;
+}
+
+#main{
+    display: flex;
+    flex-direction: row;
+
 }
