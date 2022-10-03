@@ -155,6 +155,11 @@ a.navButton:hover{
     font-family: 'Lobster', cursive;
 }
 
+.background-2 section.hero h1.learningStackTitleAdjustment{
+    left: 40%;
+    top: 30%;
+}
+
 #tilesContainer{
     display: flex;
     flex-direction: row;
@@ -169,19 +174,28 @@ a.navButton:hover{
     display: flex;
     flex-direction: column;
     margin: 3rem;
+    background-color: rgb(20, 35, 67, .5);
+    border-radius: 15px 15px;
+    padding: 3rem;
+    width: 80%;
 }
 
 .tile h3{
     font-size: 3rem;
     margin-bottom: .5rem;
     font-family: 'Space Mono', monospace;
-    color: #ffe7c9;
+    color: #rgb(255,231,201, .5);
+}
+
+.tile h3:hover{
+    text-decoration: underline;
 }
 
 .tile span{
     font-size: 1.5rem;
     font-family: 'Space Mono', monospace;
     color: #ffe7c9;
+    margin-bottom: 2rem;
 }
 
 nav.filters{
@@ -289,8 +303,9 @@ nav.filters a:hover{
 }
 
 .add-learning-stack-form input{
-    color: #ffe7c9;
+    color: #142343;
     width: 50%;
+    background-color: #ffe7c9;
 }
 
 .add-learning-stack-header{
