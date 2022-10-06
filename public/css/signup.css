@@ -35,7 +35,7 @@ ul {
 body {
 	display: flex;
 	flex-direction: row-reverse;
-	color: #0d0c22;
+	color: #ffe7c9;
 }
 
 hr {
@@ -77,10 +77,16 @@ hr {
 }
 
 .signup__form-container {
+	display: flex;
+	align-self: center;
 	margin-block: auto;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	background-color: rgb(20, 35, 67, .6);
+	padding: 2em;
+	border-radius: 15px 15px;
+	margin-top: 2.5%;
 }
 
 .signup__header {
@@ -123,11 +129,14 @@ hr {
 	font-weight: 400;
 	font-size: 1.3rem;
 	color: #444;
-	text-decoration: none;
 }
 
-.login__link:hover {
-	color: rgb(89, 89, 89);
+a:-webkit-any-link.login__link{
+	text-decoration: underline;
+}
+
+a.login__link:hover {
+	text-decoration: none;
 }
 
 .password__min-len {
@@ -138,46 +147,56 @@ hr {
 .signup__subheading {
 	font-size: 1.5rem;
 	font-weight: 400;
+	font-family: 'Space Mono', monospace;
 }
 
 .signup__input,
-.signup__btn,
+/* .signup__btn, */
 .signup__title {
 	min-width: 50rem;
 }
 
 .signup__title {
-	font-size: 2.2rem;
-	font-weight: 600;
+	font-family: 'Lobster', cursive;
+    color: #ffe7c9;
+    font-size: 7em;
 	text-align: left;
 }
 
 .signup__input {
 	border: none;
-	background: #f3f3f4;
+	background: #ffe7c9;
 	padding: .8rem;
 	padding-left: 1.5rem;
 	font-size: 1.2rem;
 }
 
+input.signup__btn{
+	text-align: center;
+	justify-self: center;
+}
+
 .signup__btn {
-	font-size: 1.5rem;
-	background: #28966b;
-	color: white;
-
-	padding: 1rem;
-
-	border: none;
-	box-shadow: 0 0.35rem #257866;
-	position: relative;
-	margin-bottom: 2rem;
+	display: flex;
+    max-width: 40%;
+    font-size: 2em;
+    margin-top: .5em;
+    border: none;
+    color: #ffe7c9;
+    font-family: 'Space Mono', monospace;
+    background-color: #142343;
+    box-shadow: 10px 5px 5px black;
+    padding: .5em;
+    border-radius: 15px 15px;
 }
 
 .signup__btn:hover {
 	cursor: pointer;
 	top: -0.35rem;
-	box-shadow: 0 .7rem #444;
+	text-decoration: underline;
 }
+
+
 
 /* 
 ============== Media Queries ==============

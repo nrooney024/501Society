@@ -1,0 +1,452 @@
+html{
+    font-size: 62.5%;
+    min-height: 100%;
+    min-width: 100%;
+    background-color: #348d9d;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+.container{
+    min-height: 100%;
+    min-width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: left;
+}
+
+.container.background-1{
+    background: url("../../images/501-Society-homepage-background.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position:absolute;
+    top:0px;
+    right:0px;
+    bottom:0px;
+    left:0px;
+}
+
+/* Hero */
+
+.container.background-1 .hero{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    flex-wrap: wrap;
+    max-width: 50%;
+    min-height: 50%;
+    padding: 10rem;
+    padding-top: 20rem;
+}
+
+.container.background-1 .hero h1{
+    display: flex;
+    font-family: 'Lobster', cursive;
+    color: #ffe7c9;
+    font-size: 10rem; 
+    margin: 0;
+}
+
+.hero span{
+    display: flex;
+    color: #ffe7c9;
+    font-size: 3.5rem;
+    font-family: 'Space Mono', monospace;
+    /* max-width: 50%; */
+    text-align: left;
+}
+
+.hero button{
+    display: flex;
+    max-width: 40%;
+    font-size: 3rem;
+    margin-top: .5rem;
+    border: none;
+    color: #ffe7c9;
+    font-family: 'Space Mono', monospace;
+    background-color: #142343;
+    box-shadow: 10px 5px 5px black;
+    padding: .5rem;
+    border-radius: 15px 15px;
+}
+
+/* Links */
+
+a:-webkit-any-link {
+    text-decoration: none;
+    color: #ffe7c9;
+}
+
+a:-webkit-any-link.titleLink {
+    text-decoration: underline;
+}
+
+a:-webkit-any-link.titleLink:hover {
+    text-decoration: none;
+}
+
+.hero button:hover{
+    text-decoration: underline;
+    
+}
+
+a.navButton{
+    display: flex;
+    flex-direction: row-reverse;
+    color: #ffe7c9;
+    font-size: 1.5rem;
+    font-family: 'Space Mono', monospace;
+    text-decoration: underline; 
+    align-self: flex-start;
+    margin-right: 2rem;
+ 
+}
+
+a.navButton:hover{
+    text-decoration: none;
+}
+
+/* Learning Stack Page */
+
+.container.background-2{
+    background: url("../../images/501-Society-background-2.png");
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: static;
+    top:0px;
+    right:0px;
+    bottom:0px;
+    left:0px;
+    min-width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container.background-2 .hero{
+    position: static;
+}
+
+.columnContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 10rem;
+}
+
+.background-2 section.hero h1{
+    position: absolute;
+    left: 66vh;
+    top: 25vh;
+    font-size: 6vw;
+    color: #142343;
+    min-width: 5%;
+    text-align: center;
+    font-family: 'Lobster', cursive;
+}
+
+.background-2 section.hero h1.learningStackTitleAdjustment{
+    left: 33.5vw;
+    max-width: 30vw;
+    right: 36.5vw;
+    max-height: 30vh;
+    top: 23vh;
+    bottom: 47vh;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#tilesContainer{
+    display: flex;
+    flex-direction: row;
+    width: 100vh;
+    justify-items: center;
+    margin-bottom: 15rem;
+    align-items: flex-start;
+    align-self: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    min-width: 100%;
+}
+
+.tile{
+    display: flex;
+    flex-direction: column;
+    margin: 3rem;
+    background-color: rgb(20, 35, 67, .5);
+    border-radius: 15px 15px;
+    padding: 4rem;
+    min-width: 15%;
+    max-width: 15%;
+    vertical-align: text-top;
+}
+
+.list{
+    width: 80% !important;
+    min-width: 80% !important;
+    max-width: 80% !important;
+}
+
+.tile h3{
+    font-size: 3rem;
+    margin-bottom: .5rem;
+    font-family: 'Space Mono', monospace;
+    color: #rgb(255,231,201, .5);
+}
+
+.tile h3:hover{
+    text-decoration: underline;
+}
+
+.tile span{
+    font-size: 1.5rem;
+    font-family: 'Space Mono', monospace;
+    color: #ffe7c9;
+    margin-bottom: 2rem;
+}
+
+nav.filters{
+    display: inline-block;
+    flex-direction: row;
+    width: fit-content;
+    justify-self: center;
+    font-size: 2rem;
+    justify-content: space-around;
+    text-align: center;
+    background-color: #142343;
+    padding: 3rem;
+    border-radius: 15px 15px;
+    margin-top: 3rem;
+    font-family: 'Space Mono', monospace;
+    color: #ffe7c9;
+}
+
+nav.filters a{
+    margin: 3rem;  
+    text-decoration: underline;  
+}
+
+nav.filters a:hover{
+    text-decoration: none;
+}
+
+#nav,
+#nav ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    font-size: 2rem;
+    justify-content: flex-end;
+}
+
+#nav button{
+    justify-self: flex-start;
+}
+
+#nav li{
+    padding-right: 2rem;
+}
+
+#nav li a{
+    text-decoration: underline;
+}
+
+#nav li a:hover{
+    text-decoration: none;
+}
+
+#content{
+    position: static;
+    
+}
+
+/* Add Learning Stack */
+
+.add-learning-stack-button{
+    display: block;
+    align-self: flex-start;
+    width: auto;
+    height: 38px;
+    flex-wrap: nowrap;
+    line-height: 38px;
+    text-align: center;
+    font-size: 14px;
+    margin: 6px;
+    min-width: .1rem;
+    padding: 1rem;
+    letter-spacing: 0;
+    line-height: 100%;
+    z-index: 9999;
+    position: fixed;
+    border: none;
+    color: #ffe7c9;
+    font-family: 'Space Mono', monospace;
+    background-color: #142343;
+    box-shadow: 10px 5px 5px black;
+    padding: .5rem;
+    border-radius: 15px 15px;
+    top: 1rem;
+    left: 0;
+}
+
+.add-learning-stack-button:hover{
+    text-decoration: underline;
+}
+
+.add-learning-stack-form{
+    display: none;
+    flex-direction: column;
+	position: fixed;
+  	padding: 4rem;
+  	background-color: rgb(20, 35, 67, .9);
+	width: auto;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 9999;
+    border-radius: 15px 15px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.add-learning-stack-form input{
+    color: #142343;
+    width: 50%;
+    background-color: #ffe7c9;
+}
+
+.add-learning-stack-header{
+	font-family: 'Lobster', cursive;
+    color: #ffe7c9;
+    font-size: 7em;
+	text-align: left;
+    margin-top: 0;
+}
+
+.form-name{
+    color: #ffe7c9;
+    font-family: 'Space Mono', monospace;
+    font-size: 2rem;
+}
+
+.enter-url{
+	min-width: 100%;
+}
+
+.close-form{
+	justify-self: right;
+	margin-bottom: 5rem;
+    margin-left: 75%;
+	background-color: none;
+	color: #919499;
+	text-decoration: underline;
+	
+}
+
+.close-form:hover{
+	text-decoration: none;
+}
+
+.submit-form{
+    display: flex;
+    max-width: fit-content;
+    font-size: 2em;
+    margin-top: .5em;
+    border: none;
+    color: #ffe7c9;
+    font-family: 'Space Mono', monospace;
+    background-color: #142343;
+    box-shadow: 10px 5px 5px black;
+    padding: .5em;
+    border-radius: 15px 15px;
+    text-align: center;
+}
+
+.submit-form:hover{
+    cursor: pointer;
+	top: -0.35rem;
+	text-decoration: underline;
+}
+
+#main{
+    display: flex;
+    flex-direction: row;
+
+}
+
+
+/* Mobile */
+
+@media only screen and (max-width: 667px) {
+    
+    .container.background-2{
+        background: url("../../images/501-Society-background-2.png");
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        -o-background-size: contain;
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: static;
+        top:0px;
+        right:0px;
+        bottom:0px;
+        left:0px;
+        min-width: 10%;
+        height: 40vh;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #tilesContainer{
+        display: flex;
+        flex-direction: row;
+        justify-items: center;
+        margin-bottom: 15rem;
+        align-items: flex-start;
+        align-self: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        max-width: 100vw;
+    }
+
+    .background-2 section.hero h1.learningStackTitleAdjustment{
+        left: 34vw;
+        max-width: 30vw;
+        right: 36vw;
+        max-height: 30vh;
+        top: 15vh;
+        bottom: 47vh;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .tile,
+    .list{
+        display: flex;
+        flex-direction: column;
+        margin: 3rem;
+        background-color: rgb(20, 35, 67, .5);
+        border-radius: 15px 15px;
+        padding: 4rem;
+        vertical-align: text-top;
+        max-width: 80% !important;
+        min-width: 80% !important;
+        width: 80% !important;
+
+    }
+
+   
+
+  }
