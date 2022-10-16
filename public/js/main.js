@@ -65,11 +65,30 @@
 
 })(jQuery);
 
+// Showing/hiding learning stacks/stack form
+
 function openForm() {
 	document.getElementById("addLearningStackForm").style.display = "flex";
+	if (
+		navigator.userAgent.match(/Android/i) ||
+		navigator.userAgent.match(/iPhone/i)
+	  ) {
+		document.getElementById("nav").style.display = "none";
+	  }
   }
   
   function closeForm() {
 	document.getElementById("addLearningStackForm").style.display = "none";
   }
 
+
+//   Showing/hiding mobile nav
+
+  function toggleMobileNav() {
+	var x = document.getElementById("nav");
+	if (x.style.display === "none") {
+	  x.style.display = "flex";
+	} else {
+	  x.style.display = "none";
+	}
+  }

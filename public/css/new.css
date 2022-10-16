@@ -128,14 +128,14 @@ a.navButton:hover{
     right:0px;
     bottom:0px;
     left:0px;
-    min-width: 100%;
-    height: 100vh;
+    /* min-width: 100%; */
+    height: 65vh;
     display: flex;
-    flex-direction: column;
-}
-
-.container.background-2 .hero{
-    position: static;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    align-items: flex-start;
+    
 }
 
 .columnContainer{
@@ -147,25 +147,11 @@ a.navButton:hover{
 }
 
 .background-2 section.hero h1{
-    position: absolute;
-    left: 66vh;
-    top: 25vh;
-    font-size: 6vw;
+    display: flex;
+    font-size: 12rem;
     color: #142343;
-    min-width: 5%;
-    text-align: center;
     font-family: 'Lobster', cursive;
-}
-
-.background-2 section.hero h1.learningStackTitleAdjustment{
-    left: 33.5vw;
-    max-width: 30vw;
-    right: 36.5vw;
-    max-height: 30vh;
-    top: 23vh;
-    bottom: 47vh;
-    text-align: center;
-    vertical-align: middle;
+    text-shadow:1px 1px 10px #fff, 1px 1px 10px #ccc;
 }
 
 #tilesContainer{
@@ -194,23 +180,31 @@ a.navButton:hover{
 }
 
 .list{
-    width: 80% !important;
-    min-width: 80% !important;
-    max-width: 80% !important;
+    display: flex;
+    flex-direction: column;
+    margin: 3rem;
+    background-color: rgb(20, 35, 67, .5);
+    border-radius: 15px 15px;
+    padding: 4rem;
+    vertical-align: text-top;
+    width: 80%;
 }
 
-.tile h3{
+.tile h3,
+.list h3{
     font-size: 3rem;
     margin-bottom: .5rem;
     font-family: 'Space Mono', monospace;
     color: #rgb(255,231,201, .5);
 }
 
-.tile h3:hover{
+.tile h3:hover,
+.list h3:hover{
     text-decoration: underline;
 }
 
-.tile span{
+.tile span,
+.list span{
     font-size: 1.5rem;
     font-family: 'Space Mono', monospace;
     color: #ffe7c9;
@@ -240,6 +234,10 @@ nav.filters a{
 
 nav.filters a:hover{
     text-decoration: none;
+}
+
+.mobile-toggler{
+    display: none;
 }
 
 #nav,
@@ -391,22 +389,83 @@ nav.filters a:hover{
 
 @media only screen and (max-width: 667px) {
     
-    .container.background-2{
-        background: url("../../images/501-Society-background-2.png");
-        -webkit-background-size: contain;
-        -moz-background-size: contain;
-        -o-background-size: contain;
-        background-size: contain;
+
+/* Background 1 */
+
+    .container.background-1{
+        background: url("../../images/501-Society-homepage-background.png");
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
         background-repeat: no-repeat;
         position: static;
-        top:0px;
-        right:0px;
-        bottom:0px;
-        left:0px;
         min-width: 10%;
         height: 40vh;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .container.background-1 .hero {
+        padding-top: 4rem;
+        justify-content: center;
+    }
+
+    .container.background-1 .hero span {
+        text-align: center;
+        font-size: 2rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .container.background-1 .hero button {
+        max-width: 60vw;
+    }
+
+    .container.background-1 .hero h1 {
+        font-size: 8rem;
+        justify-self: center;
+        align-self: flex-start;
+        text-align: center;
+    }
+
+
+/* Sign Up Page */
+
+.signup__title {
+    text-align: center;
+}
+
+.signup__form-container {
+    margin: 0 1rem 5rem 1rem;
+}
+
+
+/* Login Page */
+
+.login__title {
+    text-align: center;
+}
+
+.login__form-container {
+    margin: 0 1rem 5rem 1rem;
+}
+
+
+/* Background 2 - learning stacks, learning stack */
+
+    .container.background-2{
+        background: url("../../images/501-Society-background-2.png");
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: static;
+        min-width: 10%;
+        height: 40vh;
     }
     
     #tilesContainer{
@@ -421,15 +480,21 @@ nav.filters a:hover{
         max-width: 100vw;
     }
 
-    .background-2 section.hero h1.learningStackTitleAdjustment{
-        left: 34vw;
-        max-width: 30vw;
-        right: 36vw;
-        max-height: 30vh;
-        top: 15vh;
-        bottom: 47vh;
-        text-align: center;
-        vertical-align: middle;
+    .background-2 section.hero h1{
+        font-size: 7rem;
+    }
+
+    .add-learning-stack-form {
+        width: 65%;
+    }
+
+    .add-learning-stack-form input{
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .add-learning-stack-header {
+        font-size: 4rem;
     }
 
     .tile,
@@ -441,12 +506,54 @@ nav.filters a:hover{
         border-radius: 15px 15px;
         padding: 4rem;
         vertical-align: text-top;
-        max-width: 80% !important;
-        min-width: 80% !important;
-        width: 80% !important;
-
+        width: 62.5vw;
+        min-width: 62.5vw;
     }
 
-   
+
+   /* Mobile Nav */
+   .mobile-toggler{
+        display: flex;
+        position: fixed;
+        margin-top: 1rem;
+        margin-left: 1rem;
+        color: #142343;
+        background-color: #ffe7c9;
+        font-size: 1.5rem;
+        z-index: 9999;
+   }
+
+   nav#nav{
+        display: none;
+        position: fixed;
+        width: 100%;
+        justify-content: flex-start;
+        background-color: rgb(20, 35, 67, .85);
+        padding-left: 2rem;
+   }
+
+   nav#nav ul{
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        
+        
+   }
+
+   .add-learning-stack-button{
+     display: flex;
+     position: inherit;
+     margin-top: 1.5rem;
+     background-color: #ffe7c9;
+     color: #142343;
+     margin: 1rem 0 0 0;
+     padding-top: 1rem;
+     
+   }
+
+   .add-learning-stack-form{
+        /* top: 60%; */
+   }
+
 
   }
