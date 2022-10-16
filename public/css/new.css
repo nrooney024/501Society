@@ -466,6 +466,7 @@ nav.filters a:hover{
         position: static;
         min-width: 10%;
         height: 40vh;
+        margin-top: 5vh;
     }
     
     #tilesContainer{
@@ -486,6 +487,7 @@ nav.filters a:hover{
 
     .add-learning-stack-form {
         width: 65%;
+        top: 60vh;
     }
 
     .add-learning-stack-form input{
@@ -515,12 +517,13 @@ nav.filters a:hover{
    .mobile-toggler{
         display: flex;
         position: fixed;
-        margin-top: 1rem;
+        margin-top: 2rem;
         margin-left: 1rem;
         color: #142343;
         background-color: #ffe7c9;
         font-size: 1.5rem;
         z-index: 9999;
+        top: 0;
    }
 
    nav#nav{
@@ -530,7 +533,8 @@ nav.filters a:hover{
         justify-content: flex-start;
         background-color: rgb(20, 35, 67, .85);
         padding-left: 2rem;
-        z-index: 9998;
+        z-index: 9997;
+        top: 0;
    }
 
    nav#nav ul{
@@ -553,6 +557,20 @@ nav.filters a:hover{
      padding-top: 1rem;
      top: auto;
      z-index: 9997;
+     top: 0;
+   }
+
+   .mobile-nav-bar{
+        display: block;
+        position: fixed;
+        background-color: #142343;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 90;
+        height: 9vh;
+        box-shadow: 0 8px 6px -6px black;
+        z-index: 9996;
    }
 
 
