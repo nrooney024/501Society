@@ -530,6 +530,7 @@ nav.filters a:hover{
         justify-content: flex-start;
         background-color: rgb(20, 35, 67, .85);
         padding-left: 2rem;
+        z-index: 9998;
    }
 
    nav#nav ul{
@@ -542,18 +543,18 @@ nav.filters a:hover{
 
    .add-learning-stack-button{
      display: flex;
-     position: inherit;
-     margin-top: 1.5rem;
+     position: fixed;
+     right: 1rem;
+     left: 40vw;
+     margin-top: 1rem;
      background-color: #ffe7c9;
      color: #142343;
      margin: 1rem 0 0 0;
      padding-top: 1rem;
-     
+     top: auto;
+     z-index: 9997;
    }
 
-   .add-learning-stack-form{
-        /* top: 60%; */
-   }
 
 
   }
