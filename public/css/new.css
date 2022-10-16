@@ -179,23 +179,31 @@ a.navButton:hover{
 }
 
 .list{
-    width: 80% !important;
-    min-width: 80% !important;
-    max-width: 80% !important;
+    display: flex;
+    flex-direction: column;
+    margin: 3rem;
+    background-color: rgb(20, 35, 67, .5);
+    border-radius: 15px 15px;
+    padding: 4rem;
+    vertical-align: text-top;
+    width: 80%;
 }
 
-.tile h3{
+.tile h3,
+.list h3{
     font-size: 3rem;
     margin-bottom: .5rem;
     font-family: 'Space Mono', monospace;
     color: #rgb(255,231,201, .5);
 }
 
-.tile h3:hover{
+.tile h3:hover,
+.list h3:hover{
     text-decoration: underline;
 }
 
-.tile span{
+.tile span,
+.list span{
     font-size: 1.5rem;
     font-family: 'Space Mono', monospace;
     color: #ffe7c9;
@@ -402,17 +410,17 @@ nav.filters a:hover{
 
     .container.background-1 .hero span {
         text-align: center;
-        font-size: 2.5rem;
+        font-size: 2rem;
         margin-top: 2rem;
         margin-bottom: 2rem;
     }
 
     .container.background-1 .hero button {
-        max-width: none;
+        max-width: 60vw;
     }
 
     .container.background-1 .hero h1 {
-        font-size: 10rem;
+        font-size: 8rem;
         justify-self: center;
         align-self: flex-start;
         text-align: center;
@@ -468,7 +476,20 @@ nav.filters a:hover{
     }
 
     .background-2 section.hero h1{
-        font-size: 8rem;
+        font-size: 7rem;
+    }
+
+    .add-learning-stack-form {
+        width: 65%;
+    }
+
+    .add-learning-stack-form input{
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .add-learning-stack-header {
+        font-size: 4rem;
     }
 
     .tile,
@@ -480,8 +501,11 @@ nav.filters a:hover{
         border-radius: 15px 15px;
         padding: 4rem;
         vertical-align: text-top;
-        min-width: 70vw;
+        width: 62.5vw;
+        min-width: 62.5vw;
     }
+
+
    
 
   }
