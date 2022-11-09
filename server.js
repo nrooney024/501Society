@@ -10,7 +10,7 @@ const flash = require('express-flash')
 const logger = require('morgan')
 const passport = require('passport')
 const session = require('express-session')
-const MongoStore = require('connect-mongo')(session)
+const MongoStore = require('connect-mongo')(new session)
 const methodOverride = require("method-override");
 
 const mainRoutes = require('./routes/main-routes')
