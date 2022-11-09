@@ -39,7 +39,7 @@ app.use(
       resave: false,
       saveUninitialized: false,
       store: MongoStore.create({
-        mongoUrl: mongoose.connection.getClient()
+        client: mongoose.connection.getClient()
       }),
     })
   )
