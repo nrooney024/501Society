@@ -10,7 +10,7 @@ const flash = require('express-flash')
 const logger = require('morgan')
 const passport = require('passport')
 const session = require('express-session')
-const MongoStore = require('connect-mongo').default
+const MongoStore = require('connect-mongo')(session)
 const methodOverride = require("method-override");
 
 const mainRoutes = require('./routes/main-routes')
@@ -39,7 +39,7 @@ app.use(
       resave: false,
       saveUninitialized: false,
       store: MongoStore.create({
-        // client: mongoose.connection.getClient(),
+        client: mongoose.connection.getClient(),
         mongoUrl: process.env.DB_STRING
       }),
     })
