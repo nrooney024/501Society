@@ -16,6 +16,7 @@ const methodOverride = require("method-override");
 const mainRoutes = require('./routes/main-routes')
 const learningStacksRoutes = require('./routes/learning-stacks-routes')
 const learningStackPageRoutes = require('./routes/learning-stack-page-routes')
+const authRoutes = require('./routes/auth')
 
 // Passport config
 require('./config/passport')(passport)
@@ -54,6 +55,7 @@ app.use(flash())
 app.use('/', mainRoutes)
 app.use('/learning-stacks', learningStacksRoutes)
 app.use('/learning-stack-page', learningStackPageRoutes)
+app.use('/auth', learningStackPageRoutes)
 
 
 app.listen(process.env.PORT || PORT, function() {
