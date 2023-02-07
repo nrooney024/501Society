@@ -55,7 +55,7 @@ app.use(flash())
 app.use('/', mainRoutes)
 app.use('/learning-stacks', learningStacksRoutes)
 app.use('/learning-stack-page', learningStackPageRoutes)
-app.use('/auth', learningStackPageRoutes)
+app.use('/auth', authRoutes)
 
 
 app.listen(process.env.PORT || PORT, function() {
