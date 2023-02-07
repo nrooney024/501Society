@@ -23,7 +23,7 @@ body {
 
 hr {
   width: 50rem;
-  border: .05rem solid ##ffe7c9;
+  border: .05rem solid #ffe7c9;
 }
 
 .login__subheading {
@@ -177,6 +177,11 @@ input.signup__btn{
   cursor: pointer;
   top: -0.35rem;
   text-decoration: underline;
+}
+
+
+.google-sign-in-button{
+  padding: 2em 0 2em 0;
 }
 
 /* 
