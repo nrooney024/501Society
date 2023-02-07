@@ -3,6 +3,7 @@ const router = express.Router()
 const mainController = require('../controllers/main-controllers')
 const authController = require('../controllers/auth')
 
+
 router.get('/', mainController.getIndex) 
 router.get('/login', authController.getLogin)
 router.post('/login', authController.postLogin)
