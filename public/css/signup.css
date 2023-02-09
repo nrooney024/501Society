@@ -188,6 +188,7 @@ input.signup__btn{
     box-shadow: 10px 5px 5px black;
     padding: .5em;
     border-radius: 15px 15px;
+	margin-top: 1em;
 }
 
 .signup__btn:hover {
@@ -197,6 +198,10 @@ input.signup__btn{
 }
 
 
+a img.google-button-sign-up-page{
+	margin-top: 3em;
+	margin-bottom: 2em;
+}
 
 /* 
 ============== Media Queries ==============
