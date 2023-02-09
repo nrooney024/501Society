@@ -1,3 +1,4 @@
+const path = require('path')
 const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
@@ -24,11 +25,14 @@ require('./config/passport')(passport)
 connectDB()
 
 app.set('view engine', 'ejs')
-app.use(express.static('public'))
 app.use(express.urlencoded({extended:true}))
 app.use(express.json())
 app.use(cors())
 app.use(logger('dev'))
+
+// Static folder
+app.use(express.static(path.join(__dirname, 'public')))
+
 
 //Use forms for put / delete
 app.use(methodOverride("_method"));
