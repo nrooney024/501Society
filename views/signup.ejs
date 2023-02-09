@@ -34,10 +34,10 @@
                     <hr>
                     <form action="/signup" method="POST">
                         <ul class="signup__list">
-                            <li class="signup__listitem">
+                            <!-- <li class="signup__listitem">
                                 <h3 class="signup__subheading">Username:</h3>
                                 <input class="signup__input" type="text" name="userName">
-                            </li>
+                            </li> -->
                             <li class="signup__listitem">
                                 <h3 class="signup__subheading">Email:</h3>
                                 <input class="signup__input" type="email" name="email">
@@ -56,6 +56,12 @@
                             </li>
                             <li class="signup__listitem">
                                 <input class="signup__btn" type="submit" value="Signup">
+                            </li>
+
+                            <li>
+                                <a href="/auth/google">
+                                    <img src="/images/btn_google_signin_light_normal_web.png" alt="Sign In With Googlen" class="google-button google-button-sign-up-page">
+                                </a>
                             </li>
                         </ul>
                     </form>
