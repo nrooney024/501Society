@@ -22,10 +22,6 @@ const UserSchema = new mongoose.Schema({
     type: Date,
     default: Date.now,
   },
-  userName: {
-    type: String,
-    unique: true,
-  },
   password: {
     type: String,
   },
