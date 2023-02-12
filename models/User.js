@@ -3,19 +3,31 @@ const mongoose = require('mongoose')
 const LearningStackSchema = require('./Learning-stacks-models').schema
 
 const UserSchema = new mongoose.Schema({
-  userName: {
+  googleId: {
     type: String,
-    unique: true,
-    required: true
+  },
+  displayName: {
+    type: String,
+  },
+  firstName: {
+    type: String,
+  },
+  lastName: {
+    type: String,
+  },
+  image: {
+    type: String,
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now,
   },
   password: {
     type: String,
-    required: true
   },
   email: {
     type: String,
     unique: true,
-    required: true,
   },
   learningStackArray: {
     type: [{type: mongoose.Schema.Types.ObjectId, ref: "LearningStack"}],
