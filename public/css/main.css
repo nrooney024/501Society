@@ -3216,3 +3216,26 @@ button.loginSignupButton{
 						}
 
 	}
+
+
+	/* Profile Page */
+
+	.profile-hero{
+		display: flex;
+		flex-direction: row;
+		width: 100vw;
+	}
+
+	.left-hero{
+		display: flex;
+		width: 50vw;
+	}
+
+	.right-hero{
+		display: flex;
+		width: 50vw;
+	}
+
+	img.user-profile-placeholder{
+		width: 10vw;
+	}
