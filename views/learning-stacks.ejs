@@ -44,7 +44,18 @@
 			<section class="hero">
 
 				<div class="left-hero">
-					<img src="/images/user-profile-placeholder.png" alt="This user has no photo." class="user-profile-placeholder">
+					
+					<!-- If user image is not available -->
+					<% if (userImage != null) { %>
+						<!--Show profile image  -->
+						<img src="<%= userImage%>" alt="This user has no photo." class="user-profile-placeholder">
+					<%} else { %>
+						<!-- If not, show placeholder image -->
+						<img src="/images/user-profile-placeholder.png" alt="This user has no photo." class="user-profile-placeholder">
+					<% } %> 	
+						
+					{%>	
+				
 				</div>
 
 				<div class="right-hero">

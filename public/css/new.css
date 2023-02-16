@@ -617,7 +617,7 @@ nav.filters a:hover{
 	}
 
 	.user-profile-placeholder{
-		width: 50%;
+		width: auto;
         height: 50%;
         border-radius: 50%;
         position: relative;
