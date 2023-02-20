@@ -96,22 +96,31 @@
 
 				<!-- Tiles Container -->
 				<div id="tilesContainer">
-					<% for(var i=0; i<learningStacks.length; i++) {%>						
-							
-						<div class="tile">
-							<a href="/learning-stack-page/<%= learningStacks[i]._id%>">
-								
-									<h3><%= learningStacks[i].learningStackName %></h3>
-									<span><%= learningStacks[i].dateCreated %></span>
-								
-							</a>
+					
 
-							<form
-								action="/learning-stacks/deleteLearningStack/<%= learningStacks[i].id %>?_method=DELETE"
-								method="POST">
-								<button class="btn btn-primary fa fa-trash" type="submit"></button>
-							</form>
-						</div>
+					<!-- Prompt user to add a learning stack if they don't have one -->
+					<% if (learningStacks.length != 0) { %>
+						<p>Add your first learning stack by clicking the button in the top left!</p>
+					<!-- Display learning stacks -->
+					<%} else { %>
+						<% for(var i=0; i<learningStacks.length; i++) {%>						
+								
+							<div class="tile">
+								<a href="/learning-stack-page/<%= learningStacks[i]._id%>">
+									
+										<h3><%= learningStacks[i].learningStackName %></h3>
+										<span><%= learningStacks[i].dateCreated %></span>
+									
+								</a>
+
+								<form
+									action="/learning-stacks/deleteLearningStack/<%= learningStacks[i].id %>?_method=DELETE"
+									method="POST">
+									<button class="btn btn-primary fa fa-trash" type="submit"></button>
+								</form>
+							</div>
+					
+					<% } %> 
 						
 					<% } %>
 				</div>
