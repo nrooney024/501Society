@@ -37,8 +37,8 @@ module.exports = {
               learningStackArray.push(learningStack.id)
 
             console.log('Learning stack has been added!')
-            res.redirect('/learning-stacks')
             user.save()
+            res.redirect('/learning-stacks')
         }catch(err){
             console.log(err)
         }
