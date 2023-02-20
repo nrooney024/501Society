@@ -116,27 +116,52 @@ a.navButton:hover{
 
 /* Learning Stack Page */
 
-.container.background-2{
-    background: url("../../images/501-Society-background-2.png");
-    -webkit-background-size: contain;
-    -moz-background-size: contain;
-    -o-background-size: contain;
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: static;
+.container.background-2{  
+    position: relative;
     top:0px;
     right:0px;
     bottom:0px;
     left:0px;
     /* min-width: 100%; */
-    height: 65vh;
+    height: 75vh;
+}
+
+.container.profile-background{
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    text-align: center;
+    justify-content: flex-start;
+    text-align: flex-start;
     align-items: flex-start;
-    
 }
+
+.container.background-2::before{
+    background: url("../../images/501-Society-background-2.png");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: .5;
+}
+
+.learning-stack-h1{
+    align-self: center;
+    justify-self: center;
+}
+
+
+div.container.background-2.learning-stack-header{
+    align-items: center;
+    justify-content: center;
+}
+
+
 
 .columnContainer{
     display: flex;
@@ -148,10 +173,11 @@ a.navButton:hover{
 
 .background-2 section.hero h1{
     display: flex;
-    font-size: 12rem;
+    font-size: 10rem;
     color: #142343;
     font-family: 'Lobster', cursive;
     text-shadow:1px 1px 10px #fff, 1px 1px 10px #ccc;
+    position: relative;
 }
 
 #tilesContainer{
@@ -469,6 +495,7 @@ nav.filters a:hover{
         margin-top: 5vh;
     }
     
+
     #tilesContainer{
         display: flex;
         flex-direction: row;
@@ -575,3 +602,38 @@ nav.filters a:hover{
 
 
   }
+
+  /* Profile Page */
+
+  .background-2 .hero{
+    display: flex;
+  }
+
+	.profile-hero{
+		display: flex;
+		flex-direction: row;
+		width: 100vw;
+	}
+
+	.left-hero{
+		display: flex;
+		width: 48vw;
+        align-items: center;
+        justify-content: center;
+        height: 65vh;
+	}
+
+	.right-hero{
+		display: flex;
+		width: 48vw;
+        height: 65vh;
+        align-items: center;
+	}
+
+	.user-profile-placeholder{
+		width: auto;
+        height: 50%;
+        border-radius: 50%;
+        position: relative;
+        border:10px solid white;
+	}

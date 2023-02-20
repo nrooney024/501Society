@@ -7,11 +7,16 @@ module.exports = {
         try{
             const user = await User.findById(req.user.id).populate('learningStackArray');
             console.log(`*******user: ${user}`)
+
+            const userImage = user.image
             
             const learningStackArray = user.learningStackArray
             console.log(`*******learningStackArray: ${learningStackArray}`)
 
-            res.render('learning-stacks.ejs', {learningStacks: learningStackArray})
+            res.render('learning-stacks.ejs', {
+                learningStacks: learningStackArray,
+                userImage: userImage
+            })
         }catch(err){ 
             console.log(err)
         }
