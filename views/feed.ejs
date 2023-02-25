@@ -46,7 +46,26 @@
 			<!-- Main -->
             <div class="columnContainer leftAlign">
 
-                 						  
+                 	<!-- Display learning stacks -->
+					
+					<% for(var i=0; i<allLearningStacks.length; i++) {%>						
+							
+						<div class="tile">
+							<a href="/learning-stack-page/<%= allLearningStacks[i]._id%>">
+								
+									<h3><%= allLearningStacks[i].learningStackName %></h3>
+									<span><%= allLearningStacks[i].dateCreated %></span>
+								
+							</a>
+
+							<form
+								action="/learning-stacks/deleteLearningStack/<%= learningStacks[i].id %>?_method=DELETE"
+								method="POST">
+								<button class="btn btn-primary fa fa-trash" type="submit"></button>
+							</form>
+						</div>
+				
+				<% } %>  	  
 	
             </div>
 
