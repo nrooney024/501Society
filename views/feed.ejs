@@ -48,13 +48,13 @@
 
                  	<!-- Display learning stacks -->
 					
-					<% for(var i=0; i<allLearningStacks.length; i++) {%>						
+					<% for(var i=0; i<learningStacks.length; i++) {%>						
 							
 						<div class="tile">
-							<a href="/learning-stack-page/<%= allLearningStacks[i]._id%>">
+							<a href="/learning-stack-page/<%= learningStacks[i]._id%>">
 								
-									<h3><%= allLearningStacks[i].learningStackName %></h3>
-									<span><%= allLearningStacks[i].dateCreated %></span>
+									<h3><%= learningStacks[i].learningStackName %></h3>
+									<span><%= learningStacks[i].dateCreated %></span>
 								
 							</a>
 

@@ -5,20 +5,16 @@ const User = require('../models/User')
 module.exports = {
     getFeed: async (req,res)=>{
         try{
-            const allLearningStacks = []
-            const allUserImages = []
+     
+            const learningStacks = await LearningStackExport.find({ public: 'public' })
+                
+                // .sort({ createdAt: 'desc' })
 
-            
-            
-            forEach(individualUser =>{
-                allLearningStacks.push(individualUser.populate('learningStackArray'))
-                allUserImages.push(individualUser.userImage)
-            })
 
             res.render('feed.ejs', {
-                allLearningStacks: allLearningStacks,
-                allUserImages: allUserImages
+                learningStacks
             })
+
         }catch(err){ 
             console.log(err)
         }
