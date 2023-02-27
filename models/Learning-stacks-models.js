@@ -32,6 +32,9 @@ const LearningStackSchema = new mongoose.Schema({
   learningStackName: {
     type: String,
   },
+  public: {
+    type: String,
+  },
   dateCreated: {
     type: Date,
     default: Date.now

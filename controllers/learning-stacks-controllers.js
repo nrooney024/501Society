@@ -25,9 +25,21 @@ module.exports = {
         try{
             // User signed in
             const user = await User.findById(req.user.id);
+
+            let privacySwitch = ""
+
+            // Is it public or private?
+            if (req.body.public === "on"){
+                publicSwitch = "public"
+            }else{
+                publicSwitch = "private"
+            }
+
+            console.log(req.body)
             
             const learningStack = await LearningStackExport.create({
                 learningStackName: req.body.learningStackName,
+                public: publicSwitch,
                 learningResourcesList: []
             })
             
