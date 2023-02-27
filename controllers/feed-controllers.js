@@ -8,9 +8,11 @@ module.exports = {
             const allLearningStacks = []
             const allUserImages = []
 
-            db.users.forEach(user =>{
-                allLearningStacks.push(user.populate('learningStackArray'))
-                allUserImages.push(user.userImage)
+            
+            
+            forEach(individualUser =>{
+                allLearningStacks.push(individualUser.populate('learningStackArray'))
+                allUserImages.push(individualUser.userImage)
             })
 
             res.render('feed.ejs', {

@@ -28,6 +28,9 @@ const UserSchema = new mongoose.Schema({
   email: {
     type: String,
     unique: true,
+  },  
+  privacy: {
+    type: String,
   },
   learningStackArray: {
     type: [{type: mongoose.Schema.Types.ObjectId, ref: "LearningStack"}],
