@@ -6,10 +6,7 @@ module.exports = {
     getFeed: async (req,res)=>{
         try{
      
-            const learningStacks = await LearningStackExport.find({ public: 'public' })
-                
-                // .sort({ createdAt: 'desc' })
-
+            const learningStacks = await LearningStackExport.find({ public: 'public' }).sort({ dateCreated: 'desc' })
 
             res.render('feed.ejs', {
                 learningStacks
