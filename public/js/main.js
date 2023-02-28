@@ -92,3 +92,21 @@ function openForm() {
 	  x.style.display = "none";
 	}
   }
+
+  async function publicUpdate(){
+	const learningStackId = this.parentNode.dataset.id
+    try{
+        const response = await fetch('/learning-stacks/public/', {
+            method: 'put',
+            headers: {'Content-type': 'application/json'},
+            body: JSON.stringify({
+                'learningStackIdFromJSFile': learningStackId
+            })
+        })
+        const data = await response.json()
+        console.log(data)
+        location.reload()
+    }catch(err){
+        console.log(err)
+    }
+  }

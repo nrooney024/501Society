@@ -119,18 +119,18 @@
 								</a>
 
 								<!-- Public/Private -->
-								<div class="learning-stack-checkmark">
+								<form role="form" action="#" method="post" class="learning-stack-checkmark">
 									<label for="public">Public?</label>
 									
 									<!-- If learning stack is public, add check -->
 									<% if (learningStacks[i].public == "public") { %>
-										<input type="checkbox" name="public" checked>
+										<input onclick="publicUpdate()" type="checkbox" name="public" checked>
 									<!-- If not, don't -->
 									<%} else { %>
-										<input type="checkbox" name="public">
+										<input onclick="publicUpdate()" type="checkbox" name="public">
 									<% } %>  
-									
-								</div>
+								</form>
+								
 
 								<!-- Delete learning stack -->
 								<form

@@ -65,4 +65,26 @@ module.exports = {
           res.redirect("/learning-stacks");
         }
       },
+      updatePublic: async (req, res) => {
+        
+        console.log("updatePublic running...")
+
+
+        // Find learning stack that we're updating
+        const learningStackToUpdate = await LearningStackExport.findById(req.body.learningStackIdFromJSFile)
+
+        console.log(learningStackToUpdate)
+
+        // If public is set to public, make it private
+
+        console.log(learningStackToUpdate.public)
+
+        if (learningStackToUpdate.public == "public"){
+            learningStackToUpdate.update({public: "private"})
+        }else{
+            // If public is set to private, make it public
+            learningStackToUpdate.update({public: "public"})
+        }
+        
+      }
 }    
