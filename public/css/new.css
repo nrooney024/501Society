@@ -716,3 +716,10 @@ nav.filters a:hover{
   .slider.round:before {
     border-radius: 50%;
   }
+
+  .learning-stack-checkmark{
+    font-size: 1.5rem;
+    font-family: 'Space Mono', monospace;
+    color: #ffe7c9;
+    margin-bottom: 2rem;
+  }

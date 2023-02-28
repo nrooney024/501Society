@@ -118,11 +118,27 @@
 									
 								</a>
 
+								<!-- Public/Private -->
+								<div class="learning-stack-checkmark">
+									<label for="public">Public?</label>
+									
+									<!-- If learning stack is public, add check -->
+									<% if (learningStacks[i].public == "public") { %>
+										<input type="checkbox" name="public" checked>
+									<!-- If not, don't -->
+									<%} else { %>
+										<input type="checkbox" name="public">
+									<% } %>  
+									
+								</div>
+
+								<!-- Delete learning stack -->
 								<form
 									action="/learning-stacks/deleteLearningStack/<%= learningStacks[i].id %>?_method=DELETE"
 									method="POST">
-									<button class="btn btn-primary fa fa-trash" type="submit"></button>
+									<button class="btn btn-primary fa fa-trash" type="submit"></button>	
 								</form>
+
 							</div>
 					
 					<% } %>  
