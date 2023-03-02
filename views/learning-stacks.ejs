@@ -124,10 +124,10 @@
 									
 									<!-- If learning stack is public, add check -->
 									<% if (learningStacks[i].public == "public") { %>
-										<input onclick="publicUpdate()" type="checkbox" name="public" checked>
+										<input type="checkbox" name="public" class="public-checkmark" onclick="publicUpdate()" checked>
 									<!-- If not, don't -->
 									<%} else { %>
-										<input onclick="publicUpdate()" type="checkbox" name="public">
+										<input type="checkbox" name="public" class="public-checkmark" onclick="publicUpdate()">
 									<% } %>  
 								</form>
 								
