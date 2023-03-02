@@ -93,7 +93,13 @@ function openForm() {
 	}
   }
 
-  async function publicUpdate(){
+
+
+ 
+// Public checkmark functinoality  
+document.getElementsByClassName("public-checkmark").addEventListener("click", publicUpdate);
+
+function publicUpdate(){
 	const learningStackId = this.parentNode.dataset.id
     try{
         const response = await fetch('/learning-stacks/public/', {
