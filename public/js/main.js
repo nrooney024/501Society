@@ -97,9 +97,12 @@ function openForm() {
 
  
 // Public checkmark functinoality  
-document.getElementsByClassName("public-checkmark").addEventListener("click", publicUpdate);
+document.getElementsByClassName("leanring-stack-button").addEventListener("click", publicUpdate);
 
 function publicUpdate(){
+
+	console.log("publicUpdate is working!")
+
 	const learningStackId = this.parentNode.dataset.id
     try{
         const response = await fetch('/learning-stacks/public/', {
