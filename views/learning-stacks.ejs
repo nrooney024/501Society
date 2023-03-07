@@ -110,7 +110,7 @@
 					<%} else { %>
 						<% for(var i=0; i<learningStacks.length; i++) {%>						
 								
-							<div class="tile">
+							<div class="tile" data-set="<%= learningStacks[i]._id%>">
 								<a href="/learning-stack-page/<%= learningStacks[i]._id%>">
 									
 										<h3><%= learningStacks[i].learningStackName %></h3>
@@ -119,18 +119,18 @@
 								</a>
 
 								<!-- Public/Private -->
-								<form role="form" action="#" method="post" class="learning-stack-checkmark">
-									<label for="public">Public?</label>
-									
+								
+								<div class="inline">
 									<!-- If learning stack is public, add check -->
 									<% if (learningStacks[i].public == "public") { %>
-										<input type="checkbox" name="public" class="public-checkmark" onclick="publicUpdate()" checked>
+										<span><i class="fa-solid fa-eye"></i> Public</span>
 									<!-- If not, don't -->
 									<%} else { %>
-										<input type="checkbox" name="public" class="public-checkmark" onclick="publicUpdate()">
+										<span><i class="fa-solid fa-eye-slash"></i> Private</span>
 									<% } %>  
-								</form>
-								
+									
+									<button onclick="publicUpdate()" class="learning-stack-button" data-set="<%= learningStacks[i]._id%>">Change</button>
+								</div>
 
 								<!-- Delete learning stack -->
 								<form
