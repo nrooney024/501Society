@@ -71,20 +71,23 @@ module.exports = {
 
 
         // Find learning stack that we're updating
-        const learningStackToUpdate = await LearningStackExport.findById(req.body.learningStackIdFromJSFile)
+        const learningStackToUpdate = await LearningStackExport.findById(req.params.id)
 
-        console.log(learningStackToUpdate)
+        const user = await User.findById(req.user.id);
 
         // If public is set to public, make it private
 
         console.log(learningStackToUpdate.public)
 
         if (learningStackToUpdate.public == "public"){
-            learningStackToUpdate.update({public: "private"})
+            await LearningStackExport.findByIdAndUpdate(req.params.id,{public: "private"})
+            learningStackToUpdate.save()
+            
         }else{
-            // If public is set to private, make it public
-            learningStackToUpdate.update({public: "public"})
+            await LearningStackExport.findByIdAndUpdate(req.params.id,{public: "public"})
+            learningStackToUpdate.save()
         }
-        
+        res.redirect("/learning-stacks")
+
       }
 }    
