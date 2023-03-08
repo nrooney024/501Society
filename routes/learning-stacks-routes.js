@@ -7,6 +7,8 @@ router.get('/', ensureAuth, learningStacksControllers.getLearningStacks)
 
 router.post('/createLearningStack', learningStacksControllers.createLearningStack)
 
+router.put('/public/:id', learningStacksControllers.updatePublic)
+
 router.delete('/deleteLearningStack/:id', learningStacksControllers.deleteLearningStack)
 
 module.exports = router

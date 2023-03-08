@@ -25,7 +25,7 @@
             <nav id="nav">
                 <ul>
 					<li class="current"><a href="/" title="Home"><i class="fa-solid fa-house"></i></a></li>
-					<li><a href="/learning-stacks" title="Learning Stacks"><i class="fa-solid fa-layer-group"></i></a></li>
+					<li><a href="/learning-stacks" title="My Profile"><i class="fa-regular fa-user"></i></a></li>
 					<li><a href="/logout" class="logout__btn" title="Logout"><i class="fa-solid fa-right-from-bracket"></i></a></li>
                 </ul>
             </nav>
@@ -35,33 +35,9 @@
             <div class="container background-2 learning-stack-header">
                 <section class="hero">
 							
-                    <h1 class="learning-stack-h1"><%= learningStackName %></h1>
+                    <h1>Feed</h1>
 
 				</section>
-            
-			
-				<!-- Add learning resource popup -->
-		
-				<form action="/learning-stack-page/createLearningResource/<%= learningStackId%>" method='POST' class="add-learning-stack-form" id="addLearningStackForm">
-					<button class="close-form" onclick="closeForm()">Close</button>
-					<br>
-					<h2 class="add-learning-stack-header">Add a Learning Resource</h2>
-
-					<!-- Learning Resource Name -->
-					<label for="learning-resource-name" class="form-name">Learning Resource Name
-					<input type="text" placeholder="Enter the Name of Your Learning Resource" name="learningResourceName">
-					</label>
-
-					
-					<!-- Link to Learning Resource -->
-					<label for="learning-resource-link" class="form-name">Link to Learning Resource
-					<br><input type="url" placeholder="Enter the URL of the Learning Resource" name="learningResourceLink" class="enter-url">
-					</label>
-
-					<br>
-
-					<input type="submit" value="Submit" class="submit-form">
-				</form>
 
             </div>
 
@@ -70,27 +46,26 @@
 			<!-- Main -->
             <div class="columnContainer leftAlign">
 
-                    <!-- Courses -->
-                    <% for(var i=0; i<learningResources.length; i++) {%>		
-                        <div class="list">
-                            <!-- <a href="https://youtu.be/rfscVS0vtbw" target="_blank"><img src="/images/course-image.jpg" alt="Course image"></a> -->
-                            <a href="<%= learningResources[i].urlToResource %>" target="_blank"><h3><%= learningResources[i].learningResourceName %></h3></a>
-                            <!-- <span class="courseType">YouTube</span> -->
-                            <!-- <span class="dueDate">July 4th, 2022</span> -->
-                            <!-- <div class="courseLinks">
-                                <a href="#"><i class="fa-solid fa-book" alt="Notes"></i> Notes</a>
-                                <a href="#"><i class="fa-solid fa-link"></i> Important Links</a>
-                                <a href="#"><i class="fa-solid fa-caret-down"></i> Not Yet Completed</a>
-                                <a href="#"><i class="fa-solid fa-bell"></i> Reminders</a>
-                                <a href="#"><i class="fa-solid fa-square-share-nodes"></i> Share</a>
-                            </div> -->
-                            <form
-                                action="/learning-stack-page/deleteLearningResource/<%= learningResources[i].id %>?_method=DELETE"
-                                method="POST">
-                                <button class="btn btn-primary fa fa-trash" type="submit"></button>
-                            </form>
-                        </div>
-                    <% } %>								  
+                 	<!-- Display learning stacks -->
+					
+					<% for(var i=0; i<learningStacks.length; i++) {%>						
+							
+						<div class="list">
+							<a href="/learning-stack-page/<%= learningStacks[i]._id%>">
+								
+									<h3><%= learningStacks[i].learningStackName %></h3>
+									<span><%= learningStacks[i].dateCreated %></span>
+								
+							</a>
+
+							<form
+								action="/learning-stacks/deleteLearningStack/<%= learningStacks[i].id %>?_method=DELETE"
+								method="POST">
+								<button class="btn btn-primary fa fa-trash" type="submit"></button>
+							</form>
+						</div>
+				
+				<% } %>  	  
 	
             </div>
 
