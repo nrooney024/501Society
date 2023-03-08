@@ -725,7 +725,7 @@ nav.filters a:hover{
     box-shadow: none;
     border-radius: 15px 15px;
     height: 2.25rem;
-    margin-left: .5rem;
+    margin-left: 1rem;
     z-index: 9999;
   }
 
@@ -736,4 +736,8 @@ nav.filters a:hover{
   .inline{
     display: flex;
     flex-direction: row;
+  }
+
+  .two-rem-margin-top{
+    margin-top: 2rem;
   }
