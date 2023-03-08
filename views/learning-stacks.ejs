@@ -34,7 +34,7 @@
 			<ul>
 				
 				<li class="current"><a href="/" title="Home"><i class="fa-solid fa-house"></i></a></li>
-				
+				<li class="current"><a href="/feed" title="Feed"><i class="fa-solid fa-layer-group"></i></a></li>
 				<li><a href="/logout" class="logout__btn" title="Logout"><i class="fa-solid fa-right-from-bracket"></i></a></li>
 			</ul>
 		</nav>
@@ -72,14 +72,18 @@
 				<button class="close-form" onclick="closeForm()">Close</button>
 				<br>
 				<h2 class="add-learning-stack-header">Add a Learning Stack</h2>
-				<label for="learning-stack-name" class="form-name">Learning Stack Name</label>
-				<input type="text" placeholder="Enter the Name of Your Learning Stack" name="learningStackName" required>
-				<label class="form-name">Would you like your learning stack to be public?</label>
-				<label class="switch">
-					<input type="checkbox" name="public">
-					<span class="slider round"></span>
-				</label>
-				<input type="submit" value="Submit" class="submit-form">
+				<div class="inline">
+					<label for="learning-stack-name" class="form-name">Learning Stack Name</label>
+					<input type="text" placeholder="Enter the Name of Your Learning Stack" name="learningStackName" required>
+				</div>
+				<div class="inline two-rem-margin-top">
+					<label class="form-name">Would you like your learning stack to be public?</label>
+					<label class="switch">
+						<input type="checkbox" name="public">
+						<span class="slider round"></span>
+					</label>
+				</div>
+				<input type="submit" value="Submit" class="submit-form two-rem-margin-top">
 			</form>
 
 				
@@ -114,13 +118,13 @@
 								<a href="/learning-stack-page/<%= learningStacks[i]._id%>">
 									
 										<h3><%= learningStacks[i].learningStackName %></h3>
-										<span><%= learningStacks[i].dateCreated %></span>
+										<span><%= learningStacks[i].dateCreated.toDateString() %></span>
 									
 								</a>
 
 								<!-- Public/Private -->
 								
-								<div class="inline">
+								<div class="inline two-rem-margin-top">
 									<!-- If learning stack is public, add check -->
 									<% if (learningStacks[i].public == "public") { %>
 										<span><i class="fa-solid fa-eye"></i> Public</span>
