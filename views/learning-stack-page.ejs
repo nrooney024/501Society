@@ -25,6 +25,7 @@
             <nav id="nav">
                 <ul>
 					<li class="current"><a href="/" title="Home"><i class="fa-solid fa-house"></i></a></li>
+					<li class="current"><a href="/feed" title="Feed"><i class="fa-solid fa-layer-group"></i></a></li>
 					<li><a href="/learning-stacks" title="My Profile"><i class="fa-regular fa-user"></i></a></li>
 					<li><a href="/logout" class="logout__btn" title="Logout"><i class="fa-solid fa-right-from-bracket"></i></a></li>
                 </ul>
@@ -48,19 +49,18 @@
 					<h2 class="add-learning-stack-header">Add a Learning Resource</h2>
 
 					<!-- Learning Resource Name -->
-					<label for="learning-resource-name" class="form-name">Learning Resource Name
-					<input type="text" placeholder="Enter the Name of Your Learning Resource" name="learningResourceName">
-					</label>
-
+					<div class="inline">
+						<label for="learning-resource-name" class="form-name">Learning Resource Name</label>
+						<input type="text" placeholder="Enter the Name of Your Learning Resource" name="learningResourceName">
+					</div>
 					
 					<!-- Link to Learning Resource -->
-					<label for="learning-resource-link" class="form-name">Link to Learning Resource
-					<br><input type="url" placeholder="Enter the URL of the Learning Resource" name="learningResourceLink" class="enter-url">
-					</label>
+					<div class="inline two-rem-margin-top">
+						<label for="learning-resource-link" class="form-name">Link to Learning Resource</label>
+						<input type="url" placeholder="Enter the URL of the Learning Resource" name="learningResourceLink">
+					</div>
 
-					<br>
-
-					<input type="submit" value="Submit" class="submit-form">
+					<input type="submit" value="Submit" class="submit-form two-rem-margin-top">
 				</form>
 
             </div>

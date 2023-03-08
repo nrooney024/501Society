@@ -19,7 +19,7 @@
 			<button class="mobile-toggler" onclick="toggleMobileNav()"><i class="fa-solid fa-bars"></i></button>
 
 			<!-- Add learning resource -->
-			<button type="button" class="add-learning-stack-button" onclick="openForm()">Add Learning Resource +</button>
+			<!-- <button type="button" class="add-learning-stack-button" onclick="openForm()">Add Learning Resource +</button> -->
 		
 			<!-- Nav -->
             <nav id="nav">
@@ -54,15 +54,9 @@
 							<a href="/learning-stack-page/<%= learningStacks[i]._id%>">
 								
 									<h3><%= learningStacks[i].learningStackName %></h3>
-									<span><%= learningStacks[i].dateCreated %></span>
+									<span><%= learningStacks[i].dateCreated.toDateString() %></span>
 								
 							</a>
-
-							<form
-								action="/learning-stacks/deleteLearningStack/<%= learningStacks[i].id %>?_method=DELETE"
-								method="POST">
-								<button class="btn btn-primary fa fa-trash" type="submit"></button>
-							</form>
 						</div>
 				
 				<% } %>  	  
