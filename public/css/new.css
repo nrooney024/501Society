@@ -342,7 +342,7 @@ nav.filters a:hover{
 	z-index: 9999;
     border-radius: 15px 15px;
     justify-content: flex-start;
-    align-items: center;
+    align-items: left;
 }
 
 .add-learning-stack-form input{
@@ -363,6 +363,7 @@ nav.filters a:hover{
     color: #ffe7c9;
     font-family: 'Space Mono', monospace;
     font-size: 2rem;
+    width: 48%;
 }
 
 .enter-url{
@@ -396,6 +397,8 @@ nav.filters a:hover{
     padding: .5em;
     border-radius: 15px 15px;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .submit-form:hover{
@@ -741,3 +744,4 @@ nav.filters a:hover{
   .two-rem-margin-top{
     margin-top: 2rem;
   }
+
