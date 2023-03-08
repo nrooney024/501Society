@@ -25,9 +25,21 @@ module.exports = {
         try{
             // User signed in
             const user = await User.findById(req.user.id);
+
+            let privacySwitch = ""
+
+            // Is it public or private?
+            if (req.body.public === "on"){
+                publicSwitch = "public"
+            }else{
+                publicSwitch = "private"
+            }
+
+            console.log(req.body)
             
             const learningStack = await LearningStackExport.create({
                 learningStackName: req.body.learningStackName,
+                public: publicSwitch,
                 learningResourcesList: []
             })
             
@@ -53,4 +65,29 @@ module.exports = {
           res.redirect("/learning-stacks");
         }
       },
+      updatePublic: async (req, res) => {
+        
+        console.log("updatePublic running...")
+
+
+        // Find learning stack that we're updating
+        const learningStackToUpdate = await LearningStackExport.findById(req.params.id)
+
+        const user = await User.findById(req.user.id);
+
+        // If public is set to public, make it private
+
+        console.log(learningStackToUpdate.public)
+
+        if (learningStackToUpdate.public == "public"){
+            await LearningStackExport.findByIdAndUpdate(req.params.id,{public: "private"})
+            learningStackToUpdate.save()
+            
+        }else{
+            await LearningStackExport.findByIdAndUpdate(req.params.id,{public: "public"})
+            learningStackToUpdate.save()
+        }
+        res.redirect("/learning-stacks")
+
+      }
 }    
