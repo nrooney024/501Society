@@ -129,7 +129,11 @@
 										<span><i class="fa-solid fa-eye-slash"></i> Private</span>
 									<% } %>  
 									
-									<button onclick="publicUpdate()" class="learning-stack-button" data-set="<%= learningStacks[i]._id%>">Change</button>
+
+									<form action="/learning-stacks/public/<%= learningStacks[i]._id%>?_method=PUT" method="POST">
+										<button class="learning-stack-button" name="public" type="submit">Change</button>
+									</form>
+
 								</div>
 
 								<!-- Delete learning stack -->
