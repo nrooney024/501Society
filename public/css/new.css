@@ -296,6 +296,10 @@ nav.filters a:hover{
     
 }
 
+.only-mobile{
+    display: none;
+}
+
 /* Add Learning Stack */
 
 .add-learning-stack-button{
@@ -456,6 +460,10 @@ nav.filters a:hover{
         justify-self: center;
         align-self: flex-start;
         text-align: center;
+    }
+
+    .only-mobile{
+        display: flex;
     }
 
 
