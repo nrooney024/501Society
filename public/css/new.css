@@ -519,6 +519,7 @@ nav.filters a:hover{
     
     .container.background-2::before {
         background: none;
+        height: 40vh;
     }
 
     p.add-new-prompt{
@@ -544,12 +545,17 @@ nav.filters a:hover{
     }
 
     .add-learning-stack-form {
-        width: 100vw;
+        width: 90vw;
     }
 
     .add-learning-stack-form input{
         width: 100%;
         margin-bottom: 2rem;
+    }
+
+    .add-learning-stack-form input::placeholder {
+        display: flex;
+        flex-wrap: wrap;
     }
 
     .add-learning-stack-header {
