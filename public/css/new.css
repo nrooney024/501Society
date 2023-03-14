@@ -580,7 +580,7 @@ nav.filters a:hover{
         position: fixed;
         width: 100%;
         justify-content: flex-start;
-        background-color: rgb(20, 35, 67, .85);
+        background-color: rgb(20, 35, 67);
         padding-left: 2rem;
         z-index: 9997;
         top: 0;
