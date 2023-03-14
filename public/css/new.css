@@ -153,6 +153,7 @@ a.navButton:hover{
 .learning-stack-h1{
     align-self: center;
     justify-self: center;
+    text-align: center;
 }
 
 
@@ -296,6 +297,10 @@ nav.filters a:hover{
     
 }
 
+.only-mobile{
+    display: none;
+}
+
 /* Add Learning Stack */
 
 .add-learning-stack-button{
@@ -411,6 +416,13 @@ nav.filters a:hover{
 
 }
 
+.font-styling-1{
+    font-size: 1.5rem;
+    font-family: 'Space Mono', monospace;
+    color: #ffe7c9;
+    margin-bottom: 2rem;
+}
+
 
 /* Mobile */
 
@@ -458,6 +470,15 @@ nav.filters a:hover{
         text-align: center;
     }
 
+    .only-mobile{
+        display: flex;
+    }
+
+    .children-inline{
+        display: flex;
+
+    }
+
 
 /* Sign Up Page */
 
@@ -492,10 +513,20 @@ nav.filters a:hover{
         background-repeat: no-repeat;
         position: static;
         min-width: 10%;
-        height: 40vh;
+        height: 50vh;
         margin-top: 5vh;
     }
     
+    .container.background-2::before {
+        background: none;
+        height: 40vh;
+    }
+
+    p.add-new-prompt{
+        font-size: 2rem;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
 
     #tilesContainer{
         display: flex;
@@ -510,16 +541,21 @@ nav.filters a:hover{
     }
 
     .background-2 section.hero h1{
-        font-size: 7rem;
+        font-size: 6rem;
     }
 
     .add-learning-stack-form {
-        width: 100vw;
+        width: 90vw;
     }
 
     .add-learning-stack-form input{
         width: 100%;
         margin-bottom: 2rem;
+    }
+
+    .add-learning-stack-form input::placeholder {
+        display: flex;
+        flex-wrap: wrap;
     }
 
     .add-learning-stack-header {
@@ -560,7 +596,7 @@ nav.filters a:hover{
         position: fixed;
         width: 100%;
         justify-content: flex-start;
-        background-color: rgb(20, 35, 67, .85);
+        background-color: rgb(20, 35, 67);
         padding-left: 2rem;
         z-index: 9997;
         top: 0;
@@ -602,7 +638,9 @@ nav.filters a:hover{
         z-index: 9996;
    }
 
-
+   img.user-profile-placeholder{
+        height: 30%;
+   }
 
   }
 
