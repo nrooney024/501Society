@@ -513,10 +513,17 @@ nav.filters a:hover{
         background-repeat: no-repeat;
         position: static;
         min-width: 10%;
-        height: 40vh;
+        height: 50vh;
         margin-top: 5vh;
     }
     
+    .container.background-2::before {
+        background: none;
+    }
+
+    .add-new-prompt{
+        
+    }
 
     #tilesContainer{
         display: flex;
@@ -531,7 +538,7 @@ nav.filters a:hover{
     }
 
     .background-2 section.hero h1{
-        font-size: 7rem;
+        font-size: 6rem;
     }
 
     .add-learning-stack-form {
@@ -623,7 +630,9 @@ nav.filters a:hover{
         z-index: 9996;
    }
 
-
+   img.user-profile-placeholder{
+        height: 30%;
+   }
 
   }
 
