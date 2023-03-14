@@ -521,8 +521,10 @@ nav.filters a:hover{
         background: none;
     }
 
-    .add-new-prompt{
-        
+    p.add-new-prompt{
+        font-size: 2rem;
+        padding-left: 10%;
+        padding-right: 10%;
     }
 
     #tilesContainer{
