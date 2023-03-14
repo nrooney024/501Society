@@ -415,6 +415,13 @@ nav.filters a:hover{
 
 }
 
+.font-styling-1{
+    font-size: 1.5rem;
+    font-family: 'Space Mono', monospace;
+    color: #ffe7c9;
+    margin-bottom: 2rem;
+}
+
 
 /* Mobile */
 
@@ -464,6 +471,11 @@ nav.filters a:hover{
 
     .only-mobile{
         display: flex;
+    }
+
+    .children-inline{
+        display: flex;
+
     }
 
 
