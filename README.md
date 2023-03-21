@@ -1,48 +1,13 @@
-# 501SocietyHeroku2
+# Welcome to the Github repo for 501 Society! 
 
+*Below is a little bit about this project, but please don't hesitate to reach out with any questions:*
 
-################################################ Next Steps: ##################################################################
+## What is 5:01 Society?
+501 Society helps provide structure to online learning, by providing the tools to make and discover online curriculums.
 
-8.28.22
-- Set up user authentication
+## Why is it called 5:01 Society?
+Generally, people have their 9 to 5 jobs, but 5:01 is your time. It's your time to learning something new like how to become a software engineer, or a new hobby like what techniques do you need to rock climb. Whatever it is, 5:01 Society is here to help!
 
-
-
-8.25.22
-- Fix post request for new learning stacks
-
-
-8.24.22
-- Check traversy's: repo, full path of the get request, dependencies
-
-
-
-################################################ Post Request Steps: ########################################################################
-
-ejs
-- have form that sends the message to client side javascript
-
-client side Javascript
-- receives the post request and sends to route through a fetch 
-
-Route 
-- hands it to the controller
-
-
-Controller
-- goes through model to server
-
-
-######################## Get request steps to show learning stacks: ########################################################################
-
-Controller
-- Update this to pull in data from the database (Believe this is done!)
-
-Route
-- Make sure the route is set up to accept this request (Believe this is done too!)
-
-EJS
-- Make sure it's accepting the data and displaying it properly
-
-
+## What is next for the development of 5:01 Society?
+We still have a long road ahead, but for now we're finalizing the MVP by testing functionality and transferring from EJS to React, to make a more flexible and faster website.
 
