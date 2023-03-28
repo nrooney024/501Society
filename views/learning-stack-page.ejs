@@ -101,20 +101,16 @@
 							<div class="list">
 								<!-- <a href="https://youtu.be/rfscVS0vtbw" target="_blank"><img src="/images/course-image.jpg" alt="Course image"></a> -->
 								<a href="<%= learningResources[i].urlToResource %>" target="_blank"><h3><%= learningResources[i].learningResourceName %></h3></a>
-								<!-- <span class="courseType">YouTube</span> -->
-								<!-- <span class="dueDate">July 4th, 2022</span> -->
-								<!-- <div class="courseLinks">
-									<a href="#"><i class="fa-solid fa-book" alt="Notes"></i> Notes</a>
-									<a href="#"><i class="fa-solid fa-link"></i> Important Links</a>
-									<a href="#"><i class="fa-solid fa-caret-down"></i> Not Yet Completed</a>
-									<a href="#"><i class="fa-solid fa-bell"></i> Reminders</a>
-									<a href="#"><i class="fa-solid fa-square-share-nodes"></i> Share</a>
-								</div> -->
-								<form
-									action="/learning-stack-page/deleteLearningResource/<%= learningResources[i].id %>?_method=DELETE"
-									method="POST">
-									<button class="btn btn-primary fa fa-trash" type="submit"></button>
-								</form>
+								
+								<% if (currentUsersID == userAssociatedToLearningStack) { %>
+									<!-- Show delete button if it's the user  -->
+									<form action="/learning-stack-page/deleteLearningResource/<%= learningResources[i].id %>?_method=DELETE" method="POST">
+										<button class="btn btn-primary fa fa-trash" type="submit"></button>
+									</form>
+								<%} else { %>
+									
+								<% } %>		
+								
 							</div>
 						<% } %>		
 					
