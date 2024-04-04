@@ -1,48 +1,59 @@
-# 501SocietyHeroku2
+<h1 align="center">
+  <a href="https://www.501society.com/">501 Society</a>
+</h1>
+
+<p align="center">
+  <img src="https://github.com/nrooney024/501Society/blob/main/public/images/501-society-tab-icon-round.png?raw=true" alt="501 Society" width="250"/>
+</p>
+
+After work, it's your time to work on you. 5:01 Society offers the tools for anyone to build their own curriculum to learn whatever they want. [Click here to visit 501society.com.](https://www.501society.com/)
 
 
-################################################ Next Steps: ##################################################################
+<br>
 
-8.28.22
-- Set up user authentication
+## Key Features
 
+* Create your own curriculums, including whatever online learning resources you'd like.
+* Share your curriculums with others by setting them to public. These will appear on the 501 Society feed.
 
+## How It Works
 
-8.25.22
-- Fix post request for new learning stacks
+Constructed a NodeJS back-end that connects to a MongoDB database, with a Mongoose schema. The front-end is built using EJS and authentication uses Passport.
 
+## Setup and Running Locally
 
-8.24.22
-- Check traversy's: repo, full path of the get request, dependencies
+To run the Real Estate Assistant backend locally, you'll need:
 
+- Java JDK 11 or newer
+- [Maven](https://maven.apache.org/) installed on your computer
+- Environment variables for API keys (e.g., OpenCage API key)
 
+The backend is built with Maven, making it easy to compile and run with just a few commands.
 
-################################################ Post Request Steps: ########################################################################
+### Running the Server
 
-ejs
-- have form that sends the message to client side javascript
+Prerequisites
+- Node.js installed on your machine
+- MongoDB running locally or a MongoDB Atlas account for the database
 
-client side Javascript
-- receives the post request and sends to route through a fetch 
+#### Steps
 
-Route 
-- hands it to the controller
+Clone the repository:
 
+```bash
+git clone <repository-url>
+```
+Replace <repository-url> with the URL of your GitHub repository.
 
-Controller
-- goes through model to server
+Navigate to the project directory:
 
+```bash
+cd <project-directory-name>
+```
+Replace <project-directory-name> with the name of your project directory.
 
-######################## Get request steps to show learning stacks: ########################################################################
+Install dependencies:
 
-Controller
-- Update this to pull in data from the database (Believe this is done!)
-
-Route
-- Make sure the route is set up to accept this request (Believe this is done too!)
-
-EJS
-- Make sure it's accepting the data and displaying it properly
-
-
-
+```bash
+npm install
+```
